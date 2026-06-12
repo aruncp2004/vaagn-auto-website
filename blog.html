@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Read the latest stories, insights, and news from Vaagn Auto — electric vehicle trends, dealership updates, and customer journeys from across Tamil Nadu.">
+  <title>Stories — Vaagn Auto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/components.js" defer></script>
+  <style>
+    .bl-hero {
+      padding: 160px 48px 80px;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+    .bl-hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: end;
+    }
+    .bl-hero-label {
+      font-family: var(--F);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .bl-hero-label::before { content: ''; width: 20px; height: 1px; background: var(--blue); }
+    .bl-hero-title {
+      font-family: var(--FD);
+      font-size: clamp(52px, 6vw, 88px);
+      color: var(--navy);
+      line-height: 0.95;
+      letter-spacing: -2px;
+    }
+    .bl-hero-title em { font-style: italic; color: rgba(10,22,40,.25); }
+    .bl-hero-desc {
+      font-family: var(--FB);
+      font-size: 16px;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 28px;
+      max-width: 380px;
+    }
+    .bl-hero-count {
+      font-family: var(--F);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(10,22,40,.3);
+    }
+    .bl-hero-count span { color: var(--navy); font-size: 14px; }
+
+    .bl-featured {
+      padding: 80px 48px;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+    .bl-featured-inner { max-width: 1200px; margin: 0 auto; }
+    .bl-section-label {
+      font-family: var(--F);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: rgba(10,22,40,.3);
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .bl-section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+    .bl-featured-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+    }
+    .bl-featured-img {
+      border-radius: 16px;
+      overflow: hidden;
+      height: 460px;
+      background: linear-gradient(135deg, #0a1628 0%, #1a3ed4 100%);
+      position: relative;
+    }
+    .bl-featured-img img { width: 100%; height: 100%; object-fit: cover; display: block; opacity: 0.6; }
+    .bl-featured-img-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(10,22,40,.8) 0%, rgba(26,62,212,.3) 100%);
+    }
+    .bl-featured-img-tag {
+      position: absolute;
+      top: 24px;
+      left: 24px;
+      font-family: var(--F);
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.6);
+      background: rgba(255,255,255,.1);
+      backdrop-filter: blur(8px);
+      padding: 6px 12px;
+      border-radius: 50px;
+      border: 1px solid rgba(255,255,255,.15);
+    }
+    .bl-featured-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .bl-featured-cat {
+      font-family: var(--F);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--blue);
+    }
+    .bl-featured-dot { width: 3px; height: 3px; border-radius: 50%; background: var(--border); }
+    .bl-featured-date { font-family: var(--F); font-size: 11px; color: rgba(10,22,40,.35); }
+    .bl-featured-title {
+      font-family: var(--FD);
+      font-size: clamp(26px, 3vw, 38px);
+      color: var(--navy);
+      line-height: 1.1;
+      letter-spacing: -0.5px;
+      margin-bottom: 16px;
+      transition: color .2s;
+    }
+    .bl-featured-card:hover .bl-featured-title { color: var(--blue); }
+    .bl-featured-excerpt {
+      font-family: var(--FB);
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 28px;
+    }
+    .bl-featured-read {
+      font-family: var(--F);
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--navy);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: gap .2s;
+    }
+    .bl-featured-card:hover .bl-featured-read { gap: 10px; }
+
+    .bl-list {
+      padding: 0 48px 80px;
+      background: var(--white);
+    }
+    .bl-list-inner { max-width: 1200px; margin: 0 auto; }
+    .bl-list-header {
+      font-family: var(--F);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: rgba(10,22,40,.3);
+      padding: 32px 0 0;
+      margin-bottom: 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .bl-list-header::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+    .bl-post {
+      display: grid;
+      grid-template-columns: 56px 1fr auto;
+      gap: 32px;
+      align-items: center;
+      padding: 32px 0;
+      border-bottom: 1px solid var(--border);
+      text-decoration: none;
+      color: inherit;
+    }
+    .bl-post:hover .bl-post-title { color: var(--blue); }
+    .bl-post-num { font-family: var(--FD); font-size: 13px; color: rgba(10,22,40,.15); text-align: right; }
+    .bl-post-meta { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+    .bl-post-cat {
+      font-family: var(--F);
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--blue);
+    }
+    .bl-post-dot { width: 3px; height: 3px; border-radius: 50%; background: var(--border); }
+    .bl-post-date { font-family: var(--F); font-size: 10px; color: rgba(10,22,40,.3); }
+    .bl-post-title {
+      font-family: var(--FD);
+      font-size: clamp(18px, 2vw, 24px);
+      color: var(--navy);
+      line-height: 1.2;
+      letter-spacing: -0.3px;
+      transition: color .2s;
+    }
+    .bl-post-excerpt {
+      font-family: var(--FB);
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.65;
+      margin-top: 6px;
+      max-width: 560px;
+    }
+    .bl-post-arrow {
+      font-family: var(--F);
+      font-size: 18px;
+      color: rgba(10,22,40,.2);
+      transition: color .2s, transform .2s;
+      flex-shrink: 0;
+    }
+    .bl-post:hover .bl-post-arrow { color: var(--blue); transform: translateX(4px); }
+
+    /* NEWSLETTER */
+    .bl-newsletter {
+      padding: 80px 48px;
+      background: var(--cream);
+      border-top: 1px solid var(--border);
+    }
+    .bl-newsletter-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .bl-newsletter-title {
+      font-family: var(--FD);
+      font-size: clamp(28px, 3vw, 40px);
+      color: var(--navy);
+      line-height: 1.1;
+      letter-spacing: -0.5px;
+      margin-bottom: 10px;
+    }
+    .bl-newsletter-sub {
+      font-family: var(--FB);
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+    .bl-newsletter-form {
+      display: flex;
+      gap: 10px;
+    }
+    .bl-newsletter-input {
+      flex: 1;
+      padding: 14px 18px;
+      border: 1.5px solid var(--border);
+      border-radius: 50px;
+      font-family: var(--FB);
+      font-size: 14px;
+      color: var(--navy);
+      background: var(--white);
+      outline: none;
+      transition: border-color .2s;
+    }
+    .bl-newsletter-input:focus { border-color: var(--blue); }
+    .bl-newsletter-input::placeholder { color: rgba(10,22,40,.35); }
+    .bl-newsletter-btn {
+      padding: 14px 28px;
+      background: var(--navy);
+      color: #fff;
+      font-family: var(--F);
+      font-size: 13px;
+      font-weight: 600;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background .2s;
+    }
+    .bl-newsletter-btn:hover { background: var(--blue); }
+
+    @media(max-width:768px) {
+      .bl-hero { padding: 120px 20px 60px; }
+      .bl-hero-inner { grid-template-columns: 1fr; gap: 24px; }
+      .bl-hero-title { font-size: 48px; letter-spacing: -1px; }
+      .bl-featured, .bl-list, .bl-newsletter { padding: 48px 20px; }
+      .bl-featured-card { grid-template-columns: 1fr; gap: 32px; }
+      .bl-featured-img { height: 260px; }
+      .bl-post { grid-template-columns: 40px 1fr auto; gap: 16px; }
+      .bl-post-excerpt { display: none; }
+      .bl-newsletter-inner { grid-template-columns: 1fr; gap: 28px; }
+      .bl-newsletter-form { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <section class="bl-hero">
+    <div class="bl-hero-inner">
+      <div>
+        <p class="bl-hero-label">Vaagn Stories</p>
+        <h1 class="bl-hero-title">News,<br>insights<br><em>&amp; ideas.</em></h1>
+      </div>
+      <div>
+        <p class="bl-hero-desc">Updates from the factory.</p>
+        <p class="bl-hero-count"><span>4</span> stories published</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bl-featured">
+    <div class="bl-featured-inner">
+      <p class="bl-section-label">Featured</p>
+      <a href="#" class="bl-featured-card">
+        <div class="bl-featured-img">
+          <img src="images/hero-images/img2.jpeg" onerror="this.style.display='none'" alt="Featured">
+          <div class="bl-featured-img-overlay"></div>
+          <span class="bl-featured-img-tag">Featured Story</span>
+        </div>
+        <div>
+          <div class="bl-featured-meta">
+            <span class="bl-featured-cat">Industry</span>
+            <span class="bl-featured-dot"></span>
+            <span class="bl-featured-date">June 2025</span>
+          </div>
+          <h2 class="bl-featured-title">Why electric commercial vehicles are the future of last-mile delivery in Tamil Nadu</h2>
+          <p class="bl-featured-excerpt">Tamil Nadu's last-mile delivery sector is at an inflection point. Fuel costs are rising, operators are under pressure, and electric alternatives have finally reached a price point that makes business sense.</p>
+          <span class="bl-featured-read">Read story →</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section class="bl-list">
+    <div class="bl-list-inner">
+      <p class="bl-list-header">All Stories</p>
+
+      <a href="#" class="bl-post">
+        <span class="bl-post-num">02</span>
+        <div>
+          <div class="bl-post-meta">
+            <span class="bl-post-cat">Product</span>
+            <span class="bl-post-dot"></span>
+            <span class="bl-post-date">May 2025</span>
+          </div>
+          <h3 class="bl-post-title">Introducing Beast MX — 210km range, 1100kg payload</h3>
+          <p class="bl-post-excerpt">The Beast MX was built for operators who need a vehicle that works as hard as they do. Everything you need to know about our flagship cargo auto.</p>
+        </div>
+        <span class="bl-post-arrow">→</span>
+      </a>
+
+      <a href="#" class="bl-post">
+        <span class="bl-post-num">03</span>
+        <div>
+          <div class="bl-post-meta">
+            <span class="bl-post-cat">Technology</span>
+            <span class="bl-post-dot"></span>
+            <span class="bl-post-date">April 2025</span>
+          </div>
+          <h3 class="bl-post-title">Why we chose LFP batteries — and why it matters for Indian operators</h3>
+          <p class="bl-post-excerpt">Safer, longer lasting, better suited for India's climate. The technology behind every Vaagn vehicle explained.</p>
+        </div>
+        <span class="bl-post-arrow">→</span>
+      </a>
+
+      <a href="#" class="bl-post">
+        <span class="bl-post-num">04</span>
+        <div>
+          <div class="bl-post-meta">
+            <span class="bl-post-cat">Customer Story</span>
+            <span class="bl-post-dot"></span>
+            <span class="bl-post-date">March 2025</span>
+          </div>
+          <h3 class="bl-post-title">How one operator in Chennai cut fuel costs by 68% in 90 days</h3>
+          <p class="bl-post-excerpt">A real story from a Vaagn customer — what switching from diesel to electric actually looks like on the ground, in numbers.</p>
+        </div>
+        <span class="bl-post-arrow">→</span>
+      </a>
+
+    </div>
+  </section>
+
+  <section class="bl-newsletter">
+    <div class="bl-newsletter-inner">
+      <div>
+        <h2 class="bl-newsletter-title">Get stories in your inbox</h2>
+        <p class="bl-newsletter-sub">Vehicle launches, operator insights, and EV industry updates from Vaagn — delivered directly to you.</p>
+      </div>
+      <div>
+        <div class="bl-newsletter-form">
+          <input type="email" class="bl-newsletter-input" placeholder="Your email address">
+          <button class="bl-newsletter-btn">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <div id="sticky-placeholder"></div>
+  <div id="popup-placeholder"></div>
+
+</body>
+</html>

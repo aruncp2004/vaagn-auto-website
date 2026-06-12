@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about Vaagn Auto Private Limited — our story, mission, and why we build India's most reliable electric commercial vehicles from Sriperumbudur, Tamil Nadu.">
+  <title>About Us — Vaagn Auto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/components.js" defer></script>
+  <style>
+    .ap-hero { height:100vh; position:relative; display:flex; align-items:flex-end; overflow:hidden; }
+    .ap-hero-bg { position:absolute; inset:0; background:linear-gradient(135deg,#0a1628 0%,#0d1f3c 60%,#1a2a4a 100%); }
+    .ap-hero-bg img { width:100%; height:100%; object-fit:cover; display:block; opacity:0.3; mix-blend-mode:luminosity; }
+    .ap-hero-gradient { position:absolute; inset:0; background:linear-gradient(to top,#0a1628 0%,rgba(10,22,40,0.6) 40%,transparent 80%); z-index:1; }
+    .ap-hero-content { position:relative; z-index:2; width:100%; max-width:1200px; margin:0 auto; padding:0 48px 80px; }
+    .ap-hero-tag { font-family:var(--F); font-size:10px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:rgba(255,255,255,.35); margin-bottom:20px; display:flex; align-items:center; gap:12px; }
+    .ap-hero-tag::before { content:''; width:24px; height:1px; background:var(--blue); display:block; }
+    .ap-hero-title { font-family:var(--FD); font-size:clamp(52px,7vw,96px); color:#fff; line-height:0.95; margin-bottom:32px; letter-spacing:-1px; }
+    .ap-hero-title em { font-style:italic; color:rgba(255,255,255,0.45); }
+    .ap-hero-bottom { display:flex; align-items:flex-end; justify-content:space-between; gap:40px; }
+    .ap-hero-desc { font-family:var(--FB); font-size:16px; color:rgba(255,255,255,.5); line-height:1.8; max-width:460px; }
+    .ap-hero-stats { display:flex; gap:40px; flex-shrink:0; }
+    .ap-hero-stat-val { font-family:var(--FD); font-size:36px; color:#fff; display:block; line-height:1; margin-bottom:6px; }
+    .ap-hero-stat-label { font-family:var(--F); font-size:9px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,.3); }
+    .ap-hero-divider { width:1px; height:40px; background:rgba(255,255,255,.1); align-self:center; }
+
+    .ap-statement { padding:120px 48px; background:var(--white); }
+    .ap-statement-inner { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:200px 1fr; gap:80px; align-items:start; }
+    .ap-statement-label { font-family:var(--F); font-size:10px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:var(--blue); padding-top:8px; }
+    .ap-statement-text { font-family:var(--FD); font-size:clamp(28px,3.5vw,44px); color:var(--navy); line-height:1.25; letter-spacing:-0.5px; }
+    .ap-statement-text span { color:rgba(10,22,40,.3); font-style:italic; }
+
+    .ap-mission { padding:0 48px 120px; background:var(--white); }
+    .ap-mission-inner { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
+    .ap-mission-img { border-radius:20px; overflow:hidden; height:560px; background:linear-gradient(135deg,#d4d8df,#626e7c); position:relative; }
+    .ap-mission-img img { width:100%; height:100%; object-fit:cover; display:block; }
+    .ap-mission-img-tag { position:absolute; bottom:24px; left:24px; background:rgba(10,22,40,.7); backdrop-filter:blur(12px); border-radius:8px; padding:12px 16px; font-family:var(--F); font-size:11px; color:rgba(255,255,255,.7); letter-spacing:1px; }
+    .ap-mission-eyebrow { font-family:var(--F); font-size:10px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:var(--blue); margin-bottom:16px; }
+    .ap-mission-title { font-family:var(--FD); font-size:clamp(28px,3vw,40px); color:var(--navy); line-height:1.1; margin-bottom:24px; letter-spacing:-0.5px; }
+    .ap-mission-body { font-family:var(--FB); font-size:15px; line-height:1.85; color:var(--muted); margin-bottom:20px; }
+    .ap-mission-quote { margin-top:36px; padding:24px 28px; border-left:2px solid var(--blue); background:var(--cream); border-radius:0 8px 8px 0; }
+    .ap-mission-quote-text { font-family:var(--FD); font-size:18px; font-style:italic; color:var(--navy); line-height:1.55; }
+
+    .ap-story { padding:120px 48px; background:var(--cream); overflow:hidden; }
+    .ap-story-inner { max-width:1200px; margin:0 auto; }
+    .ap-story-top { display:grid; grid-template-columns:1fr 1fr; gap:80px; margin-bottom:64px; }
+    .ap-story-title { font-family:var(--FD); font-size:clamp(36px,4vw,56px); color:var(--navy); line-height:1.05; letter-spacing:-0.5px; }
+    .ap-story-body { font-family:var(--FB); font-size:15px; line-height:1.85; color:var(--muted); margin-bottom:20px; }
+    .ap-story-img { border-radius:20px; overflow:hidden; height:520px; background:linear-gradient(135deg,#c8b89a,#8a6e4a); }
+    .ap-story-img img { width:100%; height:100%; object-fit:cover; display:block; }
+
+    .ap-why { padding:120px 48px; background:var(--white); }
+    .ap-why-inner { max-width:1200px; margin:0 auto; }
+    .ap-why-top { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:end; margin-bottom:64px; }
+    .ap-why-title { font-family:var(--FD); font-size:clamp(36px,4vw,52px); color:var(--navy); line-height:1.05; letter-spacing:-0.5px; }
+    .ap-why-sub { font-family:var(--FB); font-size:15px; line-height:1.8; color:var(--muted); max-width:400px; }
+    .ap-why-grid { display:grid; grid-template-columns:repeat(3,1fr); border:1px solid var(--border); border-radius:20px; overflow:hidden; }
+    .ap-why-card { padding:44px 36px; border-right:1px solid var(--border); border-bottom:1px solid var(--border); transition:background .25s; }
+    .ap-why-card:hover { background:var(--cream); }
+    .ap-why-card:nth-child(3n) { border-right:none; }
+    .ap-why-card:nth-child(4),.ap-why-card:nth-child(5),.ap-why-card:nth-child(6) { border-bottom:none; }
+    .ap-why-num { font-family:var(--FD); font-size:13px; color:rgba(10,22,40,.2); margin-bottom:20px; display:block; }
+    .ap-why-icon { width:44px; height:44px; background:var(--blue-l); border-radius:10px; display:flex; align-items:center; justify-content:center; margin-bottom:20px; }
+    .ap-why-icon svg { width:20px; height:20px; fill:var(--blue); }
+    .ap-why-card-title { font-family:var(--F); font-size:16px; font-weight:600; color:var(--navy); margin-bottom:10px; line-height:1.3; }
+    .ap-why-card-body { font-family:var(--FB); font-size:13px; color:var(--muted); line-height:1.75; }
+
+    .ap-factory { padding:120px 48px; background:var(--navy); position:relative; overflow:hidden; }
+    .ap-factory::before { content:''; position:absolute; top:-200px; right:-200px; width:600px; height:600px; background:radial-gradient(circle,rgba(26,62,212,.15) 0%,transparent 70%); pointer-events:none; }
+    .ap-factory-inner { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; position:relative; z-index:1; }
+    .ap-factory-eyebrow { font-family:var(--F); font-size:10px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:rgba(255,255,255,.3); margin-bottom:16px; display:flex; align-items:center; gap:10px; }
+    .ap-factory-eyebrow::before { content:''; width:20px; height:1px; background:var(--blue); }
+    .ap-factory-title { font-family:var(--FD); font-size:clamp(28px,3vw,44px); color:#fff; line-height:1.1; margin-bottom:24px; letter-spacing:-0.5px; }
+    .ap-factory-body { font-family:var(--FB); font-size:15px; color:rgba(255,255,255,.45); line-height:1.85; margin-bottom:16px; }
+    .ap-factory-address { margin-top:36px; padding-top:36px; border-top:1px solid rgba(255,255,255,.08); }
+    .ap-factory-address-label { font-family:var(--F); font-size:9px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,.25); margin-bottom:8px; }
+    .ap-factory-address-text { font-family:var(--FB); font-size:14px; color:rgba(255,255,255,.55); line-height:1.8; }
+    .ap-factory-btn { display:inline-flex; align-items:center; gap:8px; margin-top:20px; font-family:var(--F); font-size:12px; font-weight:600; color:#fff; text-decoration:none; padding:11px 22px; border:1px solid rgba(255,255,255,.15); border-radius:50px; transition:background .2s,border-color .2s; }
+    .ap-factory-btn:hover { background:rgba(255,255,255,.06); border-color:rgba(255,255,255,.3); }
+    .ap-factory-img { border-radius:20px; overflow:hidden; height:520px; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.06); }
+    .ap-factory-img img { width:100%; height:100%; object-fit:cover; display:block; opacity:0.85; }
+
+    .ap-cta { padding:120px 48px; background:var(--white); text-align:center; }
+    .ap-cta-inner { max-width:680px; margin:0 auto; }
+    .ap-cta-eyebrow { font-family:var(--F); font-size:10px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:var(--blue); margin-bottom:16px; }
+    .ap-cta-title { font-family:var(--FD); font-size:clamp(36px,4vw,52px); color:var(--navy); line-height:1.05; margin-bottom:20px; letter-spacing:-0.5px; }
+    .ap-cta-sub { font-family:var(--FB); font-size:16px; color:var(--muted); line-height:1.75; margin-bottom:40px; }
+    .ap-cta-btns { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+
+    @media(max-width:768px){
+      .ap-hero-content { padding:0 20px 60px; }
+      .ap-hero-title { font-size:42px; }
+      .ap-hero-bottom { flex-direction:column; align-items:flex-start; gap:28px; }
+      .ap-hero-stats { gap:24px; }
+      .ap-statement,.ap-mission,.ap-story,.ap-why,.ap-factory,.ap-cta { padding:64px 20px; }
+      .ap-statement-inner { grid-template-columns:1fr; gap:16px; }
+      .ap-mission-inner,.ap-factory-inner { grid-template-columns:1fr; gap:40px; }
+      .ap-story-top,.ap-why-top { grid-template-columns:1fr; gap:24px; }
+      .ap-mission-img,.ap-story-img,.ap-factory-img { height:280px; }
+      .ap-why-grid { grid-template-columns:1fr; }
+      .ap-why-card { border-right:none; border-bottom:1px solid var(--border) !important; }
+      .ap-why-card:last-child { border-bottom:none !important; }
+      .ap-statement-text { font-size:24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <section class="ap-hero">
+    <div class="ap-hero-bg">
+      <img src="images/hero-images/img2.jpeg" onerror="this.style.display='none'" alt="Vaagn Auto">
+    </div>
+    <div class="ap-hero-gradient"></div>
+    <div class="ap-hero-content">
+      <p class="ap-hero-tag">Vaagn Auto Private Limited</p>
+      <h1 class="ap-hero-title">Electric vehicles<br><em>made for</em><br>Indian roads.</h1>
+      <div class="ap-hero-bottom">
+        <p class="ap-hero-desc">Manufactured in Sriperumbudur, Tamil Nadu. Built for India's last-mile operators, logistics companies, and passenger transport businesses.</p>
+        <div class="ap-hero-stats">
+          <div class="ap-hero-stat">
+            <span class="ap-hero-stat-val">₹1.80L</span>
+            <span class="ap-hero-stat-label">Starting From</span>
+          </div>
+          <div class="ap-hero-divider"></div>
+          <div class="ap-hero-stat">
+            <span class="ap-hero-stat-val">210km</span>
+            <span class="ap-hero-stat-label">Max Range</span>
+          </div>
+          <div class="ap-hero-divider"></div>
+          <div class="ap-hero-stat">
+            <span class="ap-hero-stat-val">70%</span>
+            <span class="ap-hero-stat-label">Cost Savings</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ap-statement" id="about-us">
+    <div class="ap-statement-inner">
+      <p class="ap-statement-label">Our Mission</p>
+      <p class="ap-statement-text">We build electric commercial vehicles that <span>make zero-emission transport</span> profitable for Indian operators — from the very first kilometre.</p>
+    </div>
+  </section>
+
+  <section class="ap-mission">
+    <div class="ap-mission-inner">
+      <div class="ap-mission-img">
+        <img src="images/beast-mx/beast-mx-front.png" onerror="this.style.display='none'" alt="Vaagn Mission">
+        <div class="ap-mission-img-tag">Sriperumbudur, Tamil Nadu</div>
+      </div>
+      <div class="ap-mission-text">
+        <p class="ap-mission-eyebrow">Who We Are</p>
+        <h2 class="ap-mission-title">Purpose-built for India's commercial operators</h2>
+        <p class="ap-mission-body">Vaagn Auto designs and manufactures electric commercial vehicles specifically for India's last-mile delivery operators, logistics companies, and passenger transport businesses.</p>
+        <p class="ap-mission-body">Every vehicle we make is engineered for real Indian conditions — rough roads, heavy loads, daily commercial use. Not imported designs adapted for India. Vehicles born here, built here, proven here.</p>
+        <p class="ap-mission-body">Our fleet covers every commercial need: open cargo autos, closed vans, tippers, flatbeds, intercity cargo, and passenger transport — starting from ₹1.80L.</p>
+        <div class="ap-mission-quote">
+          <p class="ap-mission-quote-text">"Built for the roads that built India."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ap-story" id="our-story">
+    <div class="ap-story-inner">
+      <div class="ap-story-top">
+        <div>
+          <p class="s-eyebrow">Our Story</p>
+          <h2 class="ap-story-title">From Sriperumbudur to Tamil Nadu's roads</h2>
+        </div>
+        <div>
+          <p class="ap-story-body">Vaagn Auto was founded with one conviction — India's commercial operators deserved better. Petrol and diesel vehicles were costing operators lakhs every year in fuel and maintenance. Electric options existed, but none were engineered for the payload demands, road conditions, and economics of Indian commercial transport.</p>
+          <p class="ap-story-body">So we built them ourselves. Starting from our factory in Sriperumbudur, Tamil Nadu, we engineered a fleet of electric commercial vehicles from the ground up — designed to earn their keep from day one.</p>
+        </div>
+      </div>
+      <div class="ap-story-img">
+        <img src="images/hero-images/img3.jpeg" onerror="this.style.display='none'" alt="Our Story">
+      </div>
+    </div>
+  </section>
+
+  <section class="ap-why" id="why-vaagn">
+    <div class="ap-why-inner">
+      <div class="ap-why-top">
+        <div>
+          <p class="s-eyebrow">Why Vaagn</p>
+          <h2 class="ap-why-title">Every decision starts with the operator</h2>
+        </div>
+        <p class="ap-why-sub">We ask one question before every design choice — does this make the operator's business more profitable?</p>
+      </div>
+      <div class="ap-why-grid">
+        <div class="ap-why-card">
+          <span class="ap-why-num">01</span>
+          <div class="ap-why-icon"><svg viewBox="0 0 24 24"><path d="M5 3H3v18h18V3H5zm14 16H5V5h14v14zM7 7h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2zM7 11h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2zM7 15h10v3H7z"/></svg></div>
+          <h3 class="ap-why-card-title">Made in Tamil Nadu</h3>
+          <p class="ap-why-card-body">Designed and manufactured in Sriperumbudur. Every vehicle supports local manufacturing, local supply chains, and local employment.</p>
+        </div>
+        <div class="ap-why-card">
+          <span class="ap-why-num">02</span>
+          <div class="ap-why-icon"><svg viewBox="0 0 24 24"><path d="M7 2v11h3v9l7-12h-4l4-8z"/></svg></div>
+          <h3 class="ap-why-card-title">LFP Battery Technology</h3>
+          <p class="ap-why-card-body">Lithium Iron Phosphate batteries — safer, longer lasting, and more thermally stable. Built for daily commercial operation in Indian conditions.</p>
+        </div>
+        <div class="ap-why-card">
+          <span class="ap-why-num">03</span>
+          <div class="ap-why-icon"><svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg></div>
+          <h3 class="ap-why-card-title">Up to 70% Cost Savings</h3>
+          <p class="ap-why-card-body">Operators save up to 70% on fuel and maintenance compared to petrol and diesel vehicles. The vehicle pays for itself.</p>
+        </div>
+        <div class="ap-why-card">
+          <span class="ap-why-num">04</span>
+          <div class="ap-why-icon"><svg viewBox="0 0 24 24"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg></div>
+          <h3 class="ap-why-card-title">Built for Indian Roads</h3>
+          <p class="ap-why-card-body">Tested on real Indian road conditions. Every model handles the payload demands and terrain realities of Indian commercial transport.</p>
+        </div>
+        <div class="ap-why-card">
+          <span class="ap-why-num">05</span>
+          <div class="ap-why-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
+          <h3 class="ap-why-card-title">GPS Tracking Standard</h3>
+          <p class="ap-why-card-body">Every vehicle comes with GPS tracking built-in — giving fleet operators real-time visibility over every vehicle on the road.</p>
+        </div>
+        <div class="ap-why-card">
+          <span class="ap-why-num">06</span>
+          <div class="ap-why-icon"><svg viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20C19 20 22 3 22 3c-1 2-8 2-13 0 3-2 9.3 0 11.5-3C18.5 2 17 8 17 8z"/></svg></div>
+          <h3 class="ap-why-card-title">Zero Emissions</h3>
+          <p class="ap-why-card-body">Every Vaagn on the road replaces a petrol or diesel vehicle. Cleaner air for Tamil Nadu. Better economics for the operator.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ap-factory">
+    <div class="ap-factory-inner">
+      <div class="ap-factory-text">
+        <p class="ap-factory-eyebrow">Manufacturing</p>
+        <h2 class="ap-factory-title">Built in Sriperumbudur, Tamil Nadu</h2>
+        <p class="ap-factory-body">Our manufacturing facility in Sriperumbudur is where every Vaagn vehicle is assembled, tested, and prepared for delivery. Every component is sourced, every weld is checked, every vehicle is test-driven before it reaches an operator.</p>
+        <p class="ap-factory-body">Sriperumbudur is Tamil Nadu's industrial heartland — and Vaagn is proud to be part of its growing EV manufacturing ecosystem.</p>
+        <div class="ap-factory-address">
+          <p class="ap-factory-address-label">Factory Address</p>
+          <p class="ap-factory-address-text">S.NO: 417/1B1, 419, A-Block<br>Sriperumbudur, Tamil Nadu 602105</p>
+        </div>
+        <a href="https://maps.google.com/?q=Sriperumbudur+Tamil+Nadu+602105" target="_blank" class="ap-factory-btn">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Get Directions
+        </a>
+      </div>
+      <div class="ap-factory-img">
+        <img src="images/Showroom%20places/chennai.png" onerror="this.style.display='none'" alt="Vaagn Factory">
+      </div>
+    </div>
+  </section>
+
+  <section class="ap-cta">
+    <div class="ap-cta-inner">
+      <p class="ap-cta-eyebrow">Get Started</p>
+      <h2 class="ap-cta-title">Ready to go electric?</h2>
+      <p class="ap-cta-sub">Talk to our team about the right Vaagn vehicle for your business. Test rides available at our Sriperumbudur facility.</p>
+      <div class="ap-cta-btns">
+        <a href="tel:+919600809197" class="btn-quote">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          Call Us Now
+        </a>
+        <a href="index.html#all-vehicles" class="btn-details">View All Vehicles →</a>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+<div id="popup-placeholder"></div>
+<div id="sticky-placeholder"></div>
+
+</body>
+</html>

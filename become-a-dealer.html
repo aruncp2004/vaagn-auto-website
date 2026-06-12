@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Become a Vaagn Auto authorised dealer. Join India's fastest-growing electric commercial vehicle network and serve customers across Tamil Nadu and beyond.">
+  <title>Become a Dealer — Vaagn Auto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/components.js" defer></script>
+  <style>
+    /* ── DEALER PAGE ── */
+
+    .dl-hero {
+      height: 100vh;
+      min-height: 600px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      background: var(--navy);
+      overflow: hidden;
+    }
+    .dl-hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(26,62,212,.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(26,62,212,.07) 1px, transparent 1px);
+      background-size: 72px 72px;
+    }
+    .dl-hero-glow {
+      position: absolute;
+      right: -100px;
+      bottom: -150px;
+      width: 650px;
+      height: 650px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(26,62,212,.2) 0%, transparent 65%);
+    }
+    .dl-hero-fade {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, var(--navy) 50%, transparent 100%);
+    }
+    .dl-hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 48px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .dl-hero-label {
+      font-family: var(--F);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .dl-hero-label::before { content: ''; width: 20px; height: 1px; background: var(--blue); }
+    .dl-hero-title {
+      font-family: var(--FD);
+      font-size: clamp(44px, 5.5vw, 80px);
+      color: #fff;
+      line-height: 0.97;
+      letter-spacing: -1.5px;
+      margin-bottom: 24px;
+    }
+    .dl-hero-title em { font-style: italic; color: rgba(255,255,255,.35); }
+    .dl-hero-desc {
+      font-family: var(--FB);
+      font-size: 16px;
+      color: rgba(255,255,255,.45);
+      line-height: 1.8;
+      max-width: 400px;
+    }
+    .dl-hero-stats {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .dl-hero-stat {
+      padding: 28px 32px;
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.07);
+      border-radius: 14px;
+      transition: background .2s;
+    }
+    .dl-hero-stat:hover { background: rgba(255,255,255,.07); }
+    .dl-hero-stat-val {
+      font-family: var(--FD);
+      font-size: 36px;
+      color: #fff;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .dl-hero-stat-label {
+      font-family: var(--F);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.3);
+    }
+
+    /* WHY BECOME DEALER */
+    .dl-why {
+      padding: 100px 48px;
+      background: var(--white);
+    }
+    .dl-why-inner { max-width: 1200px; margin: 0 auto; }
+    .dl-why-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: end;
+      margin-bottom: 56px;
+    }
+    .dl-why-title {
+      font-family: var(--FD);
+      font-size: clamp(32px, 4vw, 48px);
+      color: var(--navy);
+      line-height: 1.05;
+      letter-spacing: -0.5px;
+    }
+    .dl-why-desc {
+      font-family: var(--FB);
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+    .dl-why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    .dl-why-card {
+      padding: 40px 32px;
+      border-right: 1px solid var(--border);
+      transition: background .2s;
+    }
+    .dl-why-card:last-child { border-right: none; }
+    .dl-why-card:hover { background: var(--cream); }
+    .dl-why-num { font-family: var(--FD); font-size: 12px; color: rgba(10,22,40,.15); display: block; margin-bottom: 20px; }
+    .dl-why-icon {
+      width: 44px; height: 44px; background: var(--blue-l);
+      border-radius: 10px; display: flex; align-items: center;
+      justify-content: center; margin-bottom: 18px;
+    }
+    .dl-why-icon svg { width: 20px; height: 20px; fill: var(--blue); }
+    .dl-why-card-title { font-family: var(--F); font-size: 15px; font-weight: 600; color: var(--navy); margin-bottom: 10px; }
+    .dl-why-card-body { font-family: var(--FB); font-size: 13px; color: var(--muted); line-height: 1.75; }
+
+    /* HOW IT WORKS */
+    .dl-steps {
+      padding: 100px 48px;
+      background: var(--cream);
+    }
+    .dl-steps-inner { max-width: 1200px; margin: 0 auto; }
+    .dl-steps-header { margin-bottom: 56px; }
+    .dl-steps-title {
+      font-family: var(--FD);
+      font-size: clamp(32px, 4vw, 48px);
+      color: var(--navy);
+      line-height: 1.05;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
+    }
+    .dl-steps-sub { font-family: var(--FB); font-size: 15px; color: var(--muted); line-height: 1.75; }
+    .dl-steps-list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2px;
+      background: var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .dl-step {
+      background: var(--white);
+      padding: 36px 28px;
+      position: relative;
+    }
+    .dl-step-num {
+      font-family: var(--FD);
+      font-size: 48px;
+      color: rgba(10,22,40,.06);
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+    .dl-step-title { font-family: var(--F); font-size: 15px; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
+    .dl-step-body { font-family: var(--FB); font-size: 13px; color: var(--muted); line-height: 1.7; }
+
+    /* APPLY FORM */
+    .dl-apply {
+      padding: 100px 48px;
+      background: var(--white);
+    }
+    .dl-apply-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .dl-apply-label { font-family: var(--F); font-size: 10px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--blue); margin-bottom: 12px; }
+    .dl-apply-title {
+      font-family: var(--FD);
+      font-size: clamp(32px, 4vw, 48px);
+      color: var(--navy);
+      line-height: 1.05;
+      letter-spacing: -0.5px;
+      margin-bottom: 16px;
+    }
+    .dl-apply-desc { font-family: var(--FB); font-size: 15px; color: var(--muted); line-height: 1.8; margin-bottom: 36px; }
+    .dl-apply-contacts { display: flex; flex-direction: column; gap: 14px; }
+    .dl-apply-contact {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      color: inherit;
+      padding: 16px 20px;
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .dl-apply-contact:hover { border-color: #bbb; box-shadow: 0 4px 12px rgba(0,0,0,.06); }
+    .dl-apply-contact-icon {
+      width: 38px; height: 38px; background: var(--blue-l);
+      border-radius: 9px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .dl-apply-contact-icon svg { width: 16px; height: 16px; fill: var(--blue); }
+    .dl-apply-contact-label { font-family: var(--F); font-size: 9px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: rgba(10,22,40,.35); margin-bottom: 2px; }
+    .dl-apply-contact-val { font-family: var(--F); font-size: 14px; font-weight: 600; color: var(--navy); }
+
+    .dl-form { display: flex; flex-direction: column; gap: 14px; }
+    .dl-input {
+      width: 100%; padding: 14px 16px;
+      border: 1.5px solid var(--border); border-radius: 10px;
+      font-family: var(--FB); font-size: 14px; color: var(--navy);
+      background: #fafafa; outline: none; transition: border-color .2s, background .2s;
+    }
+    .dl-input:focus { border-color: var(--blue); background: #fff; }
+    .dl-input::placeholder { color: rgba(10,22,40,.35); }
+    .dl-textarea {
+      width: 100%; padding: 14px 16px;
+      border: 1.5px solid var(--border); border-radius: 10px;
+      font-family: var(--FB); font-size: 14px; color: var(--navy);
+      background: #fafafa; outline: none; resize: vertical; min-height: 110px;
+      transition: border-color .2s, background .2s;
+    }
+    .dl-textarea:focus { border-color: var(--blue); background: #fff; }
+    .dl-textarea::placeholder { color: rgba(10,22,40,.35); }
+    .dl-phone-row { display: flex; gap: 10px; }
+    .dl-phone-pre {
+      padding: 14px 16px; border: 1.5px solid var(--border);
+      border-radius: 10px; font-family: var(--FB); font-size: 14px;
+      color: var(--muted); background: #f0f0f0; white-space: nowrap; flex-shrink: 0;
+    }
+    .dl-submit {
+      padding: 15px 32px; background: var(--navy); color: #fff;
+      font-family: var(--F); font-size: 13px; font-weight: 600;
+      border: none; border-radius: 50px; cursor: pointer;
+      transition: background .2s, transform .15s; align-self: flex-start;
+    }
+    .dl-submit:hover { background: var(--blue); transform: translateY(-1px); }
+    .dl-form-note { font-family: var(--FB); font-size: 12px; color: rgba(10,22,40,.35); line-height: 1.6; }
+
+    @media(max-width:768px) {
+      .dl-hero-inner { grid-template-columns: 1fr; gap: 40px; padding: 0 20px; }
+      .dl-hero-title { font-size: 42px; letter-spacing: -1px; }
+      .dl-hero-stats { flex-direction: row; flex-wrap: wrap; }
+      .dl-hero-stat { flex: 1; min-width: 140px; }
+      .dl-why, .dl-steps, .dl-apply { padding: 64px 20px; }
+      .dl-why-header { grid-template-columns: 1fr; gap: 16px; }
+      .dl-why-grid { grid-template-columns: 1fr; }
+      .dl-why-card { border-right: none; border-bottom: 1px solid var(--border); }
+      .dl-why-card:last-child { border-bottom: none; }
+      .dl-steps-list { grid-template-columns: 1fr 1fr; }
+      .dl-apply-inner { grid-template-columns: 1fr; gap: 48px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <!-- HERO -->
+  <section class="dl-hero">
+    <div class="dl-hero-grid"></div>
+    <div class="dl-hero-glow"></div>
+    <div class="dl-hero-fade"></div>
+    <div class="dl-hero-inner">
+      <div>
+        <p class="dl-hero-label">Dealership Programme</p>
+        <h1 class="dl-hero-title">Sell the<br>future of<br><em>transport.</em></h1>
+        <p class="dl-hero-desc">Join Vaagn's growing dealer network and bring electric commercial vehicles to your city. High demand. Low competition. Strong margins.</p>
+      </div>
+      <div class="dl-hero-stats">
+        <div class="dl-hero-stat">
+          <p class="dl-hero-stat-val">₹1.80L</p>
+          <p class="dl-hero-stat-label">Starting Vehicle Price</p>
+        </div>
+        <div class="dl-hero-stat">
+          <p class="dl-hero-stat-val">11+</p>
+          <p class="dl-hero-stat-label">Models to Sell</p>
+        </div>
+        <div class="dl-hero-stat">
+          <p class="dl-hero-stat-val">70%</p>
+          <p class="dl-hero-stat-label">Operator Cost Savings</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY BECOME A DEALER -->
+  <section class="dl-why">
+    <div class="dl-why-inner">
+      <div class="dl-why-header">
+        <div>
+          <p class="s-eyebrow">Why Partner With Us</p>
+          <h2 class="dl-why-title">A business opportunity built for growth</h2>
+        </div>
+        <p class="dl-why-desc">Electric commercial vehicles are the fastest growing segment in India's automotive market. Vaagn gives you a proven product, strong support, and a market that is just getting started.</p>
+      </div>
+      <div class="dl-why-grid">
+        <div class="dl-why-card">
+          <span class="dl-why-num">01</span>
+          <div class="dl-why-icon">
+            <svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+          </div>
+          <h3 class="dl-why-card-title">Strong Margins</h3>
+          <p class="dl-why-card-body">Competitive dealer margins on every vehicle sold. With 11 models across multiple price points, there is something for every customer in your market.</p>
+        </div>
+        <div class="dl-why-card">
+          <span class="dl-why-num">02</span>
+          <div class="dl-why-icon">
+            <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+          </div>
+          <h3 class="dl-why-card-title">High Demand Market</h3>
+          <p class="dl-why-card-body">Operators across Tamil Nadu are actively looking to switch from diesel to electric. The demand is real, the market is growing, and competition is still low.</p>
+        </div>
+        <div class="dl-why-card">
+          <span class="dl-why-num">03</span>
+          <div class="dl-why-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+          </div>
+          <h3 class="dl-why-card-title">Full Dealer Support</h3>
+          <p class="dl-why-card-body">Training, marketing materials, technical support, and direct access to our sales team. We set you up to succeed from day one.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="dl-steps">
+    <div class="dl-steps-inner">
+      <div class="dl-steps-header">
+        <p class="s-eyebrow">How It Works</p>
+        <h2 class="dl-steps-title">From enquiry to dealership in 4 steps</h2>
+        <p class="dl-steps-sub">We keep the process simple. No complicated requirements, no long waiting periods.</p>
+      </div>
+      <div class="dl-steps-list">
+        <div class="dl-step">
+          <p class="dl-step-num">01</p>
+          <h3 class="dl-step-title">Submit Enquiry</h3>
+          <p class="dl-step-body">Fill out the form below with your details. Takes less than 2 minutes.</p>
+        </div>
+        <div class="dl-step">
+          <p class="dl-step-num">02</p>
+          <h3 class="dl-step-title">Team Call</h3>
+          <p class="dl-step-body">Our dealer relations team calls you within 24 hours to understand your market and requirements.</p>
+        </div>
+        <div class="dl-step">
+          <p class="dl-step-num">03</p>
+          <h3 class="dl-step-title">Factory Visit</h3>
+          <p class="dl-step-body">Visit our Sriperumbudur facility. See the vehicles, meet the team, and test ride any model.</p>
+        </div>
+        <div class="dl-step">
+          <p class="dl-step-num">04</p>
+          <h3 class="dl-step-title">Start Selling</h3>
+          <p class="dl-step-body">Complete the dealer agreement and start selling Vaagn vehicles in your city.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPLY FORM -->
+  <section class="dl-apply" id="apply">
+    <div class="dl-apply-inner">
+      <div class="dl-apply-left">
+        <p class="dl-apply-label">Apply Now</p>
+        <h2 class="dl-apply-title">Become a Vaagn Dealer</h2>
+        <p class="dl-apply-desc">Ready to bring electric commercial vehicles to your city? Fill out the form and our team will get back to you within 24 hours. Or reach us directly:</p>
+        <div class="dl-apply-contacts">
+          <a href="tel:+919600809197" class="dl-apply-contact">
+            <div class="dl-apply-contact-icon">
+              <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            </div>
+            <div>
+              <p class="dl-apply-contact-label">Call Us</p>
+              <p class="dl-apply-contact-val">+91 96008 09197</p>
+            </div>
+          </a>
+          <a href="mailto:info@vaagnauto.com" class="dl-apply-contact">
+            <div class="dl-apply-contact-icon">
+              <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </div>
+            <div>
+              <p class="dl-apply-contact-label">Email</p>
+              <p class="dl-apply-contact-val">info@vaagnauto.com</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <form class="dl-form" onsubmit="submitDealer(event)">
+        <input type="text" id="dl-name" class="dl-input" placeholder="Your Full Name" required>
+        <div class="dl-phone-row">
+          <span class="dl-phone-pre">+91</span>
+          <input type="tel" id="dl-phone" class="dl-input" placeholder="10-digit mobile number" maxlength="10" required style="flex:1;">
+        </div>
+        <input type="text" id="dl-city" class="dl-input" placeholder="Your City / District" required>
+        <input type="text" id="dl-business" class="dl-input" placeholder="Your Current Business (e.g. auto dealer, transport)">
+        <textarea id="dl-why" class="dl-textarea" placeholder="Why do you want to become a Vaagn dealer?"></textarea>
+        <button type="submit" class="dl-submit" id="dl-submit-btn">Submit Enquiry →</button>
+        <p class="dl-form-note">Our dealer relations team will call you within 24 hours of receiving your enquiry.</p>
+      </form>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <div id="sticky-placeholder"></div>
+  <div id="popup-placeholder"></div>
+
+  <script>
+    async function submitDealer(e) {
+      e.preventDefault();
+      const name = document.getElementById('dl-name').value.trim();
+      const phone = document.getElementById('dl-phone').value.trim();
+      const city = document.getElementById('dl-city').value.trim();
+      const business = document.getElementById('dl-business').value.trim();
+      const why = document.getElementById('dl-why').value.trim();
+      if(!name || phone.length < 10) { alert('Please enter your name and 10-digit phone number.'); return; }
+      const btn = document.getElementById('dl-submit-btn');
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+      const p = new URLSearchParams({
+        name, phone: '+91' + phone, city,
+        vehicle: 'Dealer Enquiry',
+        source: 'Become a Dealer',
+        timestamp: new Date().toISOString(),
+        message: `Business: ${business}. Why Vaagn: ${why}`
+      });
+      try {
+        await fetch('https://script.google.com/macros/s/AKfycbwzxRKP8thz4Rjj1cEckPWc2HyWR4qw_3HfaxkHNF31IVHrbPonCHZpVhTYWqpctmgm/exec?' + p.toString());
+      } catch(err) {}
+      btn.textContent = '✓ Enquiry Received!';
+      setTimeout(() => {
+        btn.textContent = 'Submit Enquiry →';
+        btn.disabled = false;
+        ['dl-name','dl-phone','dl-city','dl-business','dl-why'].forEach(id => document.getElementById(id).value = '');
+      }, 2500);
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Join the Vaagn Auto team. Explore career opportunities in electric vehicle manufacturing, sales, and service at our facilities across Tamil Nadu.">
+  <title>Careers — Vaagn Auto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/components.js" defer></script>
+  <style>
+    /* ── CAREERS PAGE ── */
+
+    .cr-hero {
+      height: 100vh;
+      min-height: 600px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      background: var(--navy);
+      overflow: hidden;
+    }
+    .cr-hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(26,62,212,.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(26,62,212,.07) 1px, transparent 1px);
+      background-size: 72px 72px;
+    }
+    .cr-hero-glow {
+      position: absolute;
+      right: -100px;
+      top: -150px;
+      width: 650px;
+      height: 650px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(26,62,212,.22) 0%, transparent 65%);
+    }
+    .cr-hero-fade {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, var(--navy) 45%, transparent 100%);
+    }
+    .cr-hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 48px;
+      width: 100%;
+    }
+    .cr-hero-label {
+      font-family: var(--F);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .cr-hero-label::before {
+      content: '';
+      width: 20px;
+      height: 1px;
+      background: var(--blue);
+    }
+    .cr-hero-title {
+      font-family: var(--FD);
+      font-size: clamp(48px, 6.5vw, 88px);
+      color: #fff;
+      line-height: 0.97;
+      letter-spacing: -1.5px;
+      margin-bottom: 28px;
+      max-width: 600px;
+    }
+    .cr-hero-title em {
+      font-style: italic;
+      color: rgba(255,255,255,.35);
+    }
+    .cr-hero-body {
+      font-family: var(--FB);
+      font-size: 16px;
+      color: rgba(255,255,255,.45);
+      line-height: 1.75;
+      max-width: 420px;
+      margin-bottom: 40px;
+    }
+    .cr-hero-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      font-family: var(--F);
+      font-size: 13px;
+      font-weight: 600;
+      color: #fff;
+      text-decoration: none;
+      padding: 14px 28px;
+      background: var(--blue);
+      border-radius: 50px;
+      transition: background .2s, transform .15s;
+    }
+    .cr-hero-btn:hover {
+      background: #2348f0;
+      transform: translateY(-1px);
+    }
+    .cr-hero-btn svg { width: 14px; height: 14px; fill: #fff; }
+
+    /* WHY JOIN */
+    .cr-why {
+      padding: 100px 48px;
+      background: var(--white);
+    }
+    .cr-why-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .cr-why-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: end;
+      margin-bottom: 56px;
+    }
+    .cr-why-title {
+      font-family: var(--FD);
+      font-size: clamp(32px, 4vw, 48px);
+      color: var(--navy);
+      line-height: 1.05;
+      letter-spacing: -0.5px;
+    }
+    .cr-why-desc {
+      font-family: var(--FB);
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+    .cr-why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    .cr-why-card {
+      padding: 40px 32px;
+      border-right: 1px solid var(--border);
+      transition: background .2s;
+    }
+    .cr-why-card:last-child { border-right: none; }
+    .cr-why-card:hover { background: var(--cream); }
+    .cr-why-num {
+      font-family: var(--FD);
+      font-size: 12px;
+      color: rgba(10,22,40,.15);
+      display: block;
+      margin-bottom: 20px;
+    }
+    .cr-why-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--blue-l);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+    .cr-why-icon svg { width: 20px; height: 20px; fill: var(--blue); }
+    .cr-why-card-title {
+      font-family: var(--F);
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+    .cr-why-card-body {
+      font-family: var(--FB);
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    /* FUTURE OPPORTUNITIES */
+    .cr-opps {
+      padding: 100px 48px;
+      background: var(--cream);
+    }
+    .cr-opps-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .cr-opps-header {
+      max-width: 560px;
+      margin-bottom: 48px;
+    }
+    .cr-opps-title {
+      font-family: var(--FD);
+      font-size: clamp(32px, 4vw, 48px);
+      color: var(--navy);
+      line-height: 1.05;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
+    }
+    .cr-opps-desc {
+      font-family: var(--FB);
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+    .cr-opps-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px;
+      background: var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 24px;
+    }
+    .cr-opp-card {
+      background: var(--white);
+      padding: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      transition: background .2s;
+    }
+    .cr-opp-card:hover { background: #fafafa; }
+    .cr-opp-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .cr-opp-icon {
+      width: 42px;
+      height: 42px;
+      background: var(--blue-l);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .cr-opp-icon svg { width: 18px; height: 18px; fill: var(--blue); }
+    .cr-opp-name {
+      font-family: var(--F);
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 3px;
+    }
+    .cr-opp-type {
+      font-family: var(--FB);
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .cr-opp-badge {
+      font-family: var(--F);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      padding: 5px 12px;
+      border-radius: 50px;
+      background: var(--blue-l);
+      color: var(--blue);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .cr-opps-note {
+      font-family: var(--FB);
+      font-size: 13px;
+      color: var(--muted);
+      text-align: center;
+      padding: 20px;
+      border: 1px dashed var(--border);
+      border-radius: 10px;
+    }
+
+    /* SUBMIT RESUME */
+    .cr-resume {
+      padding: 120px 48px;
+      background: var(--navy);
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+    .cr-resume::before {
+      content: '';
+      position: absolute;
+      top: -250px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, rgba(26,62,212,.2) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .cr-resume-inner {
+      max-width: 600px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .cr-resume-label {
+      font-family: var(--F);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.3);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+    .cr-resume-label::before,
+    .cr-resume-label::after {
+      content: '';
+      width: 20px;
+      height: 1px;
+      background: var(--blue);
+    }
+    .cr-resume-title {
+      font-family: var(--FD);
+      font-size: clamp(36px, 4.5vw, 60px);
+      color: #fff;
+      line-height: 1.0;
+      letter-spacing: -1px;
+      margin-bottom: 16px;
+    }
+    .cr-resume-sub {
+      font-family: var(--FB);
+      font-size: 15px;
+      color: rgba(255,255,255,.4);
+      line-height: 1.75;
+      margin-bottom: 44px;
+    }
+    .cr-resume-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+    .cr-resume-email {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      font-family: var(--F);
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+      text-decoration: none;
+      padding: 15px 30px;
+      background: var(--blue);
+      border-radius: 50px;
+      transition: background .2s, transform .15s;
+    }
+    .cr-resume-email:hover {
+      background: #2348f0;
+      transform: translateY(-1px);
+    }
+    .cr-resume-email svg { width: 15px; height: 15px; fill: #fff; }
+    .cr-resume-wa {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      font-family: var(--F);
+      font-size: 14px;
+      font-weight: 600;
+      color: #25d366;
+      text-decoration: none;
+      padding: 15px 28px;
+      border: 1px solid rgba(37,211,102,.2);
+      border-radius: 50px;
+      transition: background .2s;
+    }
+    .cr-resume-wa:hover { background: rgba(37,211,102,.06); }
+    .cr-resume-wa svg { width: 15px; height: 15px; fill: #25d366; }
+    .cr-resume-note {
+      font-family: var(--FB);
+      font-size: 12px;
+      color: rgba(255,255,255,.2);
+      line-height: 1.7;
+    }
+
+    @media(max-width:768px) {
+      .cr-hero-inner { padding: 0 20px; }
+      .cr-hero-title { font-size: 42px; letter-spacing: -1px; }
+      .cr-why, .cr-opps, .cr-resume { padding: 64px 20px; }
+      .cr-why-header { grid-template-columns: 1fr; gap: 16px; }
+      .cr-why-grid { grid-template-columns: 1fr; }
+      .cr-why-card { border-right: none; border-bottom: 1px solid var(--border); }
+      .cr-why-card:last-child { border-bottom: none; }
+      .cr-opps-grid { grid-template-columns: 1fr; }
+      .cr-resume-actions { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <!-- HERO -->
+  <section class="cr-hero">
+    <div class="cr-hero-grid"></div>
+    <div class="cr-hero-glow"></div>
+    <div class="cr-hero-fade"></div>
+    <div class="cr-hero-inner">
+      <p class="cr-hero-label">Careers at Vaagn Auto</p>
+      <h1 class="cr-hero-title">Help build<br><em>what India</em><br>rides next.</h1>
+      <p class="cr-hero-body">We are a growing electric vehicle startup based in Sriperumbudur, Tamil Nadu. We are looking for people who want to build real things that matter.</p>
+      <a href="#submit-resume" class="cr-hero-btn">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        Send Your Resume
+      </a>
+    </div>
+  </section>
+
+  <!-- WHY JOIN VAAGN -->
+  <section class="cr-why">
+    <div class="cr-why-inner">
+      <div class="cr-why-header">
+        <div>
+          <p class="s-eyebrow">Why Join Us</p>
+          <h2 class="cr-why-title">More than just a job</h2>
+        </div>
+        <p class="cr-why-desc">At Vaagn, you are not filling a role — you are helping build an electric vehicle company from the ground up. Every person here owns a real piece of the mission.</p>
+      </div>
+      <div class="cr-why-grid">
+        <div class="cr-why-card">
+          <span class="cr-why-num">01</span>
+          <div class="cr-why-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+          </div>
+          <h3 class="cr-why-card-title">Ownership from Day One</h3>
+          <p class="cr-why-card-body">We are a small team. Every person has direct ownership of their work. No approval chains, no politics. You build it, you own it, you see it on the road.</p>
+        </div>
+        <div class="cr-why-card">
+          <span class="cr-why-num">02</span>
+          <div class="cr-why-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+          </div>
+          <h3 class="cr-why-card-title">Fast Moving Environment</h3>
+          <p class="cr-why-card-body">Things move fast here. You will learn more in six months at Vaagn than in two years at a large corporation. Real problems, real solutions, real speed.</p>
+        </div>
+        <div class="cr-why-card">
+          <span class="cr-why-num">03</span>
+          <div class="cr-why-icon">
+            <svg viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20C19 20 22 3 22 3c-1 2-8 2-13 0 3-2 9.3 0 11.5-3C18.5 2 17 8 17 8z"/></svg>
+          </div>
+          <h3 class="cr-why-card-title">Mission That Matters</h3>
+          <p class="cr-why-card-body">We are putting zero-emission vehicles on India's commercial roads. Every vehicle we ship reduces fuel costs for operators and emissions for everyone.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FUTURE OPPORTUNITIES -->
+  <section class="cr-opps">
+    <div class="cr-opps-inner">
+      <div class="cr-opps-header">
+        <p class="s-eyebrow">Future Opportunities</p>
+        <h2 class="cr-opps-title">Where we are growing</h2>
+        <p class="cr-opps-desc">No open positions right now. But we are expanding — and we hire when we find the right people, not just when a role is officially open.</p>
+      </div>
+      <div class="cr-opps-grid">
+        <div class="cr-opp-card">
+          <div class="cr-opp-left">
+            <div class="cr-opp-icon">
+              <svg viewBox="0 0 24 24"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg>
+            </div>
+            <div>
+              <p class="cr-opp-name">Vehicle Engineering</p>
+              <p class="cr-opp-type">Design · Assembly · Quality Control</p>
+            </div>
+          </div>
+          <span class="cr-opp-badge">Upcoming</span>
+        </div>
+        <div class="cr-opp-card">
+          <div class="cr-opp-left">
+            <div class="cr-opp-icon">
+              <svg viewBox="0 0 24 24"><path d="M20 6h-2.18c.07-.44.18-.88.18-1.34C18 2.54 15.46 0 12.34 0c-1.7 0-3.21.74-4.27 1.9L12 6H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-7.66-3.24c.63-.66 1.53-1.06 2.5-1.06C16.55 1.7 18 3.16 18 4.96c0 .34-.06.67-.14 1H12l.34-3.2z"/></svg>
+            </div>
+            <div>
+              <p class="cr-opp-name">Sales & Dealer Network</p>
+              <p class="cr-opp-type">B2B Sales · Dealer Onboarding · Tamil Nadu</p>
+            </div>
+          </div>
+          <span class="cr-opp-badge">Upcoming</span>
+        </div>
+        <div class="cr-opp-card">
+          <div class="cr-opp-left">
+            <div class="cr-opp-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            </div>
+            <div>
+              <p class="cr-opp-name">Operations & Service</p>
+              <p class="cr-opp-type">After-sales · Service Centers · Logistics</p>
+            </div>
+          </div>
+          <span class="cr-opp-badge">Upcoming</span>
+        </div>
+        <div class="cr-opp-card">
+          <div class="cr-opp-left">
+            <div class="cr-opp-icon">
+              <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+            </div>
+            <div>
+              <p class="cr-opp-name">Marketing & Digital</p>
+              <p class="cr-opp-type">Brand · Content · Social Media</p>
+            </div>
+          </div>
+          <span class="cr-opp-badge">Upcoming</span>
+        </div>
+      </div>
+      <p class="cr-opps-note">Don't see your role? Send your resume anyway — we hire great people before we officially post the role.</p>
+    </div>
+  </section>
+
+  <!-- SUBMIT RESUME -->
+  <section class="cr-resume" id="submit-resume">
+    <div class="cr-resume-inner">
+      <p class="cr-resume-label">Apply Now</p>
+      <h2 class="cr-resume-title">Ready to join us?</h2>
+      <p class="cr-resume-sub">Send your resume and a short note about what you do and what you want to build at Vaagn. We read every application and respond to everyone.</p>
+      <div class="cr-resume-actions">
+        <a href="mailto:careers@vaagnauto.com" class="cr-resume-email">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          careers@vaagnauto.com
+        </a>
+        <a href="https://wa.me/919600809197" target="_blank" class="cr-resume-wa">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp Us
+        </a>
+      </div>
+      <p class="cr-resume-note">We respond within 3 working days. Based in Sriperumbudur, Tamil Nadu.</p>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <div id="sticky-placeholder"></div>
+  <div id="popup-placeholder"></div>
+
+</body>
+</html>

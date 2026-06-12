@@ -1,0 +1,16 @@
+
+  <div class="popup-overlay" id="popup-overlay">
+    <div class="popup-box">
+      <button class="p-close" onclick="closePopup()">×</button>
+      <h2 class="p-title">Get a Quote</h2>
+      <p class="p-sub" id="popup-sub">Our team will call you back within 24 hours.</p>
+      <input type="text" id="p-name" class="p-field" placeholder="Your Name" required>
+      <div class="phone-row">
+        <span class="phone-pre">+91</span>
+        <input type="tel" id="p-phone" class="p-field" style="flex:1;margin-bottom:0" placeholder="10-digit mobile" maxlength="10" required>
+      </div><br>
+      <input type="text" id="p-city" class="p-field" placeholder="Your City">
+      <input type="hidden" id="p-vehicle" value="">
+      <button class="p-submit" onclick="submitPopup()">Request Callback →</button>
+    </div>
+  </div>
