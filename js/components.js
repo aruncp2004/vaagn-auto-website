@@ -4,7 +4,7 @@ const _jsBase = _compSrc ? _compSrc.replace(/[^/]*$/, '') : '../js/';
 const COMPONENTS = {
   nav: `<nav>
     <a href="/index.html" class="nav-logo">
-  <img src="/images/vaagnBglogo.png" alt="Vaagn Auto Logo" class="logo-img">
+  <img src="images/vaagnBglogo.png" alt="Vaagn Auto Logo" class="logo-img">
   <span class="logo-word">VAAGN AUTO</span>
 </a>
     <ul class="nav-links">
