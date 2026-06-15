@@ -32,7 +32,7 @@ async function submitPopup() {
   btn.disabled = true;
   const p = new URLSearchParams({ 
     name, phone: '+91' + phone, city, vehicle, 
-   source: window.location.pathname,
+   source: document.referrer ? new URL(document.referrer).hostname : 'Direct',
     timestamp: new Date().toISOString() 
   });
   
