@@ -14,7 +14,7 @@ const COMPONENTS = {
   <p class="mega-col-title">Vehicles</p>
   <div class="mega-vgrid">
     <a href="/beast-mx" class="mega-vi" onclick="closeDrawer()">
-      <div class="mega-vi-img"><img src="images/beast-mx/beast-mx-white.png" onerror="this.style.opacity='.1'" alt="Beast MX"></div>
+      <div class="mega-vi-img"><img src="images/beast-mx-whiteLL.jpeg" onerror="this.style.opacity='.1'" alt="Beast MX"></div>
       <span class="mega-vn">Beast MX</span>
     </a>
     <a href="/beast-sx" class="mega-vi" onclick="closeDrawer()">
@@ -86,7 +86,7 @@ const COMPONENTS = {
       <div class="mega-vgrid">
 
         <a href="/beast-mx" class="mega-vi" onclick="closeDrawer()">
-          <div class="mega-vi-img"><img src="images/beast-mx/beast-mx-white.png" onerror="this.style.opacity='.1'" alt="Beast MX"></div>
+          <div class="mega-vi-img"><img src="images/beast-mx-whiteLL.jpeg" onerror="this.style.opacity='.1'" alt="Beast MX"></div>
           <span class="mega-vn">Beast MX</span>
           <span class="mega-vp">From ₹4.45L</span>
         </a>
