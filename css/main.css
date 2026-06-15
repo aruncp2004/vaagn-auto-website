@@ -338,7 +338,9 @@ nav {
 @media(max-width:768px){
     .hero-content { padding: 40px 20px 0; }
     .hero-name { font-size: 36px; }
+    .hero-right img { object-position: center center; }
     .hero-tagline { font-size: 13px; }
+    .hero-eyebrow {display: none;}
     .hero-specs-row { flex-wrap: wrap; }
     .hero-spec-item { padding: 10px 16px; }
     .hero-spec-val { font-size: 16px; }
@@ -652,7 +654,7 @@ nav {
       .hero-price-card { padding: 10px 14px; margin-bottom: 12px; }
       .price-value { font-size: 20px; }
       .hero-keys { gap: 14px; margin-bottom: 16px; }
-      .hero-actions { gap: 7px; }
+    .hero-actions { display: none; }
       .btn-call, .btn-quote, .btn-details { padding: 10px 15px; font-size: 11px; }
       .slide-arrow { width: 32px; height: 32px; font-size: 13px; }
       .arrow-prev { left: 4px; }
@@ -699,6 +701,8 @@ nav {
 .mega-drawer-divider { display: block; width: auto; height: 1px; margin: 0 16px; }
 .mega-links-wrap { display: grid; grid-template-columns: repeat(3,1fr); gap: 0 8px; padding: 20px 16px 80px; overflow-y: visible; max-height: none; }
 .mega-col a { font-size: 13px; }
+
+
     }
 
     @media(max-width:380px) {
@@ -710,3 +714,4 @@ nav {
       .hero-actions { flex-direction: column; }
       .btn-call, .btn-quote, .btn-details { width: 100%; justify-content: center; }
     }
+    
