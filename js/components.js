@@ -10,201 +10,57 @@ const COMPONENTS = {
     <ul class="nav-links">
       <li>
 <a href="/index.html#all-vehicles">Vehicles</a>        <div class="mega-menu">
-  <div class="mega-menu-inner">
-    <div class="mega-vehicles">
-
-      <div class="mega-vehicle">
-        <div class="mv-image">
-          <img src="/images/beast-mx/beast-mx-whiteL.png" onerror="this.style.opacity='.1'" alt="Beast MX">
-        </div>
-        <a href="/beast-mx" class="mv-card-link">
-          <div class="mv-top">
-            <div class="mv-name">Beast MX</div>
-            <div class="mv-desc">Open cargo auto for last mile delivery</div>
-            <div class="mv-price">From ₹4.45L</div>
-          </div>
-        </a>
-        <div class="mv-btns">
-          <button type="button" class="mv-btn-primary" onclick="event.preventDefault(); event.stopPropagation(); openPopup('Beast MX');">Get a Quote</button>
-          <a href="/beast-mx" class="mv-btn-link">Explore →</a>
-        </div>
-      </div>
-
-      <div class="mega-vehicle">
-        <div class="mv-image">
-          <img src="/images/beast%20sx/beast-sx-front.jpeg" onerror="this.style.opacity='.1'" alt="Beast SX">
-        </div>
-        <a href="/beast-sx" class="mv-card-link">
-          <div class="mv-top">
-            <div class="mv-name">Beast SX</div>
-            <div class="mv-desc">Premium cargo auto, superior performance</div>
-            <div class="mv-price">From ₹4.12 Lakh</div>
-          </div>
-        </a>
-        <div class="mv-btns">
-          <button type="button" class="mv-btn-primary" onclick="event.preventDefault(); event.stopPropagation(); openPopup('Beast SX');">Get a Quote</button>
-          <a href="/beast-sx" class="mv-btn-link">Explore →</a>
-        </div>
-      </div>
-
-      <div class="mega-vehicle">
-        <div class="mv-image">
-          <img src="/images/beast-lx-tipper%20dd/Beast%20LX%20Tipper.png" onerror="this.style.opacity='.1'" alt="Beast LX Tipper DD">
-        </div>
-        <a href="/beast-lx-tipper-dd" class="mv-card-link">
-          <div class="mv-top">
-            <div class="mv-name">Beast LX Tipper DD</div>
-            <div class="mv-desc">Double differential tipper for heavy loads</div>
-            <div class="mv-price">From ₹5.10 Lakh</div>
-          </div>
-        </a>
-        <div class="mv-btns">
-          <button type="button" class="mv-btn-primary" onclick="event.preventDefault(); event.stopPropagation(); openPopup('Beast LX Tipper DD');">Get a Quote</button>
-          <a href="/beast-lx-tipper-dd" class="mv-btn-link">Explore →</a>
-        </div>
-      </div>
-
-      <div class="mega-vehicle">
-        <div class="mv-image">
-          <img src="/images/beast%20lx%20tipper%20nd/beast-lx-tipper-nd-yellow.jpeg" onerror="this.style.opacity='.1'" alt="Beast LX Tipper ND">
-        </div>
-        <a href="/beast-lx-tipper-nd" class="mv-card-link">
-          <div class="mv-top">
-            <div class="mv-name">Beast LX Tipper ND</div>
-            <div class="mv-desc">Non-differential tipper for versatile work</div>
-            <div class="mv-price">From ₹5.10 Lakh</div>
-          </div>
-        </a>
-        <div class="mv-btns">
-          <button type="button" class="mv-btn-primary" onclick="event.preventDefault(); event.stopPropagation(); openPopup('Beast LX Tipper ND');">Get a Quote</button>
-          <a href="/beast-lx-tipper-nd" class="mv-btn-link">Explore →</a>
-        </div>
-      </div>
-
-      <div class="mega-vehicle">
-        <div class="mv-image">
-          <img src="/images/beast%20lx%20closed%20cart/beast-lx-closed-yellow.jpeg" onerror="this.style.opacity='.1'" alt="Beast LX Closed Cart">
-        </div>
-        <a href="/beast-lx-closed-cart" class="mv-card-link">
-          <div class="mv-top">
-            <div class="mv-name">Beast LX Closed Cart</div>
-            <div class="mv-desc">Enclosed cargo protection for all weather</div>
-            <div class="mv-price">From ₹4.70 Lakh</div>
-          </div>
-        </a>
-        <div class="mv-btns">
-          <button type="button" class="mv-btn-primary" onclick="event.preventDefault(); event.stopPropagation(); openPopup('Beast LX Closed Cart');">Get a Quote</button>
-          <a href="/beast-lx-closed-cart" class="mv-btn-link">Explore →</a>
-        </div>
-      </div>
-
-      <div class="mega-vehicle">
-        <div class="mv-image">
-          <img src="/images/beast%20lx%20open%20cart/beast-lx-open-yellow.jpeg" onerror="this.style.opacity='.1'" alt="Beast LX Open Cart">
-        </div>
-        <a href="/beast-lx-open-cart" class="mv-card-link">
-          <div class="mv-top">
-            <div class="mv-name">Beast LX Open Cart</div>
-            <div class="mv-desc">Open flatbed for bulky cargo delivery</div>
-            <div class="mv-price">From ₹4.47Lakh</div>
-          </div>
-        </a>
-        <div class="mv-btns">
-          <button type="button" class="mv-btn-primary" onclick="event.preventDefault(); event.stopPropagation(); openPopup('Beast LX Open Cart');">Get a Quote</button>
-          <a href="/beast-lx-open-cart" class="mv-btn-link">Explore →</a>
-        </div>
-      </div>
-
-      <div class="mega-vehicle">
-        <div class="mv-image">
-          <img src="/images/EC-Cart/titan-ec-cart-yellow.png" onerror="this.style.opacity='.1'" alt="Titan EC Cart">
-        </div>
-        <a href="/titan-ec-cart" class="mv-card-link">
-          <div class="mv-top">
-            <div class="mv-name">Titan EC Cart</div>
-            <div class="mv-desc">Zero fuel cargo cart for every road</div>
-            <div class="mv-price">From ₹2.23Lakh</div>
-          </div>
-        </a>
-        <div class="mv-btns">
-          <button type="button" class="mv-btn-primary" onclick="event.preventDefault(); event.stopPropagation(); openPopup('Titan EC Cart');">Get a Quote</button>
-          <a href="/titan-ec-cart" class="mv-btn-link">Explore →</a>
-        </div>
-      </div>
-
-      <div class="mega-vehicle">
-        <div class="mv-image">
-          <img src="/images/titan%20intercart/intercart_yellow.png" onerror="this.style.opacity='.1'" alt="Titan Cargo Intercart">
-        </div>
-        <a href="/titan-cargo-intercart" class="mv-card-link">
-          <div class="mv-top">
-            <div class="mv-name">Titan Cargo Intercart</div>
-            <div class="mv-desc">Intercity cargo for long distance runs</div>
-            <div class="mv-price">From ₹1.60Lakh</div>
-          </div>
-        </a>
-        <div class="mv-btns">
-          <button type="button" class="mv-btn-primary" onclick="event.preventDefault(); event.stopPropagation(); openPopup('Titan Cargo Intercart');">Get a Quote</button>
-          <a href="/titan-cargo-intercart" class="mv-btn-link">Explore →</a>
-        </div>
-      </div>
-
-      <div class="mega-vehicle">
-        <div class="mv-image">
-          <img src="/images/titan%20cargo%20closed%20cart/titan-open-yellow.jpeg" onerror="this.style.opacity='.1'" alt="Titan Cargo Closed">
-        </div>
-        <a href="/titan-cargo-closed-cart" class="mv-card-link">
-          <div class="mv-top">
-            <div class="mv-name">Titan Cargo Closed</div>
-            <div class="mv-desc">Enclosed titan cargo for safe transport</div>
-            <div class="mv-price">From ₹2.64Lakh</div>
-          </div>
-        </a>
-        <div class="mv-btns">
-          <button type="button" class="mv-btn-primary" onclick="event.preventDefault(); event.stopPropagation(); openPopup('Titan Cargo Closed Cart');">Get a Quote</button>
-          <a href="/titan-cargo-closed-cart" class="mv-btn-link">Explore →</a>
-        </div>
-      </div>
-
-      <div class="mega-vehicle">
-        <div class="mv-image">
-          <img src="/images/titan%20cargo%20open%20cart/titan-open-yellow.png" onerror="this.style.opacity='.1'" alt="Titan Cargo Open">
-        </div>
-        <a href="/titan-cargo-open-cart" class="mv-card-link">
-          <div class="mv-top">
-            <div class="mv-name">Titan Cargo Open</div>
-            <div class="mv-desc">Open titan platform for large loads</div>
-            <div class="mv-price">From ₹2.49Lakh</div>
-          </div>
-        </a>
-        <div class="mv-btns">
-          <button type="button" class="mv-btn-primary" onclick="event.preventDefault(); event.stopPropagation(); openPopup('Titan Cargo Open Cart');">Get a Quote</button>
-          <a href="/titan-cargo-open-cart" class="mv-btn-link">Explore →</a>
-        </div>
-      </div>
-
-      <div class="mega-vehicle">
-        <div class="mv-image">
-          <img src="/images/titan-passenger/titan-passenger-blue4.jpeg" onerror="this.style.opacity='.1'" alt="Titan Passenger">
-        </div>
-        <a href="/titan-passenger" class="mv-card-link">
-          <div class="mv-top">
-            <div class="mv-name">Titan Passenger</div>
-            <div class="mv-desc">Comfortable electric passenger auto</div>
-            <div class="mv-price">From ₹2.64Lakh</div>
-          </div>
-        </a>
-        <div class="mv-btns">
-          <button type="button" class="mv-btn-primary" onclick="event.preventDefault(); event.stopPropagation(); openPopup('Titan Passenger');">Get a Quote</button>
-          <a href="/titan-passenger" class="mv-btn-link">Explore →</a>
-        </div>
-      </div>
-
-    </div>
+<div class="mega-vgrid-wrap">
+  <p class="mega-col-title">Vehicles</p>
+  <div class="mega-vgrid">
+    <a href="/beast-mx" class="mega-vi" onclick="closeDrawer()">
+      <div class="mega-vi-img"><img src="images/beast-mx/beast-mx-white.png" onerror="this.style.opacity='.1'" alt="Beast MX"></div>
+      <span class="mega-vn">Beast MX</span>
+    </a>
+    <a href="/beast-sx" class="mega-vi" onclick="closeDrawer()">
+      <div class="mega-vi-img"><img src="images/beast-sx-front.jpeg" onerror="this.style.opacity='.1'" alt="Beast SX"></div>
+      <span class="mega-vn">Beast SX</span>
+    </a>
+    <a href="/beast-lx-tipper-dd" class="mega-vi" onclick="closeDrawer()">
+      <div class="mega-vi-img"><img src="images/Vaagn/beast-lx-tipper-dd.jpeg" onerror="this.style.opacity='.1'" alt="Beast LX Tipper DD"></div>
+      <span class="mega-vn">Beast LX Tipper DD</span>
+    </a>
+    <a href="/beast-lx-tipper-nd" class="mega-vi" onclick="closeDrawer()">
+      <div class="mega-vi-img"><img src="images/Vaagn/beast-lx-tipper-nd.jpeg" onerror="this.style.opacity='.1'" alt="Beast LX Tipper ND"></div>
+      <span class="mega-vn">Beast LX Tipper ND</span>
+    </a>
+    <a href="/beast-lx-closed-cart" class="mega-vi" onclick="closeDrawer()">
+      <div class="mega-vi-img"><img src="images/Vaagn/beast-lx-closed-cart.jpeg" onerror="this.style.opacity='.1'" alt="Beast LX Closed Cart"></div>
+      <span class="mega-vn">Beast LX Closed Cart</span>
+    </a>
+    <a href="/beast-lx-open-cart" class="mega-vi" onclick="closeDrawer()">
+      <div class="mega-vi-img"><img src="images/Vaagn/beast-lx-open-cart.jpeg" onerror="this.style.opacity='.1'" alt="Beast LX Open Cart"></div>
+      <span class="mega-vn">Beast LX Open Cart</span>
+    </a>
+    <a href="/titan-ec-cart" class="mega-vi" onclick="closeDrawer()">
+      <div class="mega-vi-img"><img src="images/Vaagn/titan-ec-cart-yellow.png" onerror="this.style.opacity='.1'" alt="Titan EC Cart"></div>
+      <span class="mega-vn">Titan EC Cart</span>
+    </a>
+    <a href="/titan-cargo-intercart" class="mega-vi" onclick="closeDrawer()">
+      <div class="mega-vi-img"><img src="images/intercart_yellow.png" onerror="this.style.opacity='.1'" alt="Titan Cargo Intercart"></div>
+      <span class="mega-vn">Titan Cargo Intercart</span>
+    </a>
+    <a href="/titan-cargo-closed-cart" class="mega-vi" onclick="closeDrawer()">
+      <div class="mega-vi-img"><img src="images/Vaagn/titan-cargo-closed.jpeg" onerror="this.style.opacity='.1'" alt="Titan Cargo Closed"></div>
+      <span class="mega-vn">Titan Cargo Closed</span>
+    </a>
+    <a href="/titan-cargo-open-cart" class="mega-vi" onclick="closeDrawer()">
+      <div class="mega-vi-img"><img src="images/Vaagn/titan-cargo-open.jpeg" onerror="this.style.opacity='.1'" alt="Titan Cargo Open"></div>
+      <span class="mega-vn">Titan Cargo Open</span>
+    </a>
+    <a href="/titan-passenger" class="mega-vi" onclick="closeDrawer()">
+      <div class="mega-vi-img"><img src="images/Vaagn/titan-passenger-blue4.jpeg" onerror="this.style.opacity='.1'" alt="Titan Passenger"></div>
+      <span class="mega-vn">Titan Passenger</span>
+    </a>
   </div>
 </div>
+</div>
       </li>
-      <li><a href="javascript:void(0)" onclick="openDrawerTo('about')">About</a></li>
       <li><a href="/become-a-dealer.html">Dealership</a></li>
       <li><a href="tel:+919600809197">Contact</a></li>
        <li><a href="/become-a-dealer.html">Dealer's Portal</a></li>

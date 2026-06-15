@@ -49,11 +49,20 @@ nav {
 
     /* MEGA MENU — Clean Rivian Style */
     .mega-menu {
-      display: block; position: fixed; top: 70px; left: 16px; right: 16px;
-      background: #fff; border-radius: 12px; box-shadow: 0 12px 28px rgba(7,17,34,.10);
-      z-index: 999; padding: 0; overflow: hidden; opacity: 0; pointer-events: none;
-      transform: translateY(-10px); transition: opacity .3s ease, transform .3s linear;
+      display: block; position: fixed; top: 72px; left: 16px; transform: translateY(-10px);
+      width: 640px; max-width: calc(100vw - 32px);
+      background: #fff; border-radius: 14px; box-shadow: 0 12px 40px rgba(0,0,0,.12);
+      z-index: 999; padding: 16px; opacity: 0; pointer-events: none;
+      transition: opacity .25s ease, transform .25s ease;
     }
+    .nav-links>li.active .mega-menu { opacity: 1; pointer-events: auto; transform: translateY(0); }
+    .mega-menu .mega-vgrid-wrap { padding: 0; max-height: none; overflow: visible; }
+    .mega-menu .mega-vgrid { grid-template-columns: repeat(4,1fr); gap: 6px; }
+    .mega-menu .mega-vi { padding: 8px 6px; }
+    .mega-menu .mega-vi-img { height: 60px; }
+    .mega-menu .mega-vi-img img { max-height: 60px; }
+    .mega-menu .mega-col-title { font-size: 9px; letter-spacing: 2px; margin-bottom: 12px; }
+    .mega-menu .mega-vn { font-size: 10px; }
     .nav-links>li.active .mega-menu { opacity: 1; pointer-events: auto; transform: translateY(0); }
     .mega-menu-inner { display: flex; width: 100%; overflow: hidden; }
     .mega-vehicles {
