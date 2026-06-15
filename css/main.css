@@ -344,6 +344,8 @@ nav {
     .hero-spec-val { font-size: 16px; }
     .btn-call, .btn-quote, .btn-details { padding: 11px 20px; font-size: 12px; }
     .hero-right img { max-height: 280px; }
+    .cs-arrow { display: none; }
+    .cs-track img { width: 92vw; height: 92vw; }
 }
 
 
@@ -400,13 +402,28 @@ nav {
 }
 
 .community-slider-wrap { position: relative; display: flex; align-items: center; gap: 12px; }
-.cs-track-wrap { overflow: hidden; flex: 1; }
+.cs-track-wrap { overflow: hidden; flex: 1; border-radius: 8px; }
 .cs-track { display: flex; gap: 8px; transition: transform 0.4s cubic-bezier(.16,1,.3,1); }
 .cs-track img { width: calc(33.333% - 6px); height: 260px; object-fit: cover; object-position: top; flex-shrink: 0; border-radius: 8px; }.cs-arrow { width: 43px; height: 44px; border-radius: 50%; background: #0a1628; color: #fff; border: none; font-size: 1.8rem; cursor: pointer; flex-shrink: 0; display: flex; align-items: center; justify-content: center; transition: background .2s; }
 .cs-arrow:hover { background: #1a3ed4; }
-@media(max-width:860px) { .cs-track img { width: 200px; height: 200px; } }
-@media(max-width:480px) { .cs-track img { width: 85vw; height: 85vw; } }
-    
+.cs-track-wrap::after {
+  content: '<‹ ›>';
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 30px;
+  color:var(--white);
+  animation: swipe-hint 1.5s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes swipe-hint {
+  0%, 100% { opacity: 0.3; transform: translateX(-50%) scale(1); }
+  50% { opacity: 1; transform: translateX(-50%) scale(1.1); }
+}
+.community-slider-wrap { position: relative; }
+@media(max-width:860px) { .cs-track img { width: 200px; height: 200px; } .cs-arrow { display: none; } }
+@media(max-width:480px) { .cs-track img { width: 92vw; height: 92vw; } }
 
     @keyframes float-v { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
     .slide-arrow { position: absolute; top: 50%; transform: translateY(-50%); z-index: 10; background: rgba(255,255,255,.85); border: 1px solid rgba(0,0,0,.1); border-radius: 50%; width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 16px; color: var(--navy); box-shadow: 0 2px 10px rgba(0,0,0,.1); transition: background .2s; user-select: none; }
@@ -615,6 +632,7 @@ nav {
       body { padding-bottom: 50px; }
       nav { padding: 0 14px; height: 52px; }
       .btn-nav { display: none; }
+      
       .popup-box { padding: 24px 20px; margin: 12px; }
       .p-title { font-size: 18px; }
       .p-sub { font-size: 12px; margin-bottom: 14px; }
