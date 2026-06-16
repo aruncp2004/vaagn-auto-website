@@ -260,6 +260,12 @@ nav {
     text-align: center; padding: 0 24px 60px;
     background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 60%);
 }
+.hero-slide[data-pos="bottom-center1"] .hero-content {
+    justify-content: flex-end; align-items: center;
+    text-align: center; padding: 0 24px 60px;
+    background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 60%);
+    padding: 0 clamp(24px,6vw,80px) 250px 20px;
+}
 
 /* bottom-right */
 .hero-slide[data-pos="bottom-right"] .hero-content {
@@ -267,12 +273,34 @@ nav {
     text-align: right; padding: 0 clamp(24px,6vw,80px) 60px 0;
     background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 60%);
 }
+.hero-slide[data-pos="bottom-right1"] .hero-content {
+    justify-content: flex-end; align-items: flex-end;
+    text-align: right; padding: 0 clamp(24px,6vw,80px) 60px 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 60%);
+    padding: 0 clamp(24px,6vw,80px) 270px 0;
+}
+.hero-slide[data-pos="bottom-center1"] .hero-content {
+    justify-content: flex-start;
+    align-items: flex-end;
+    text-align: right;
 
+    padding-top: 110px;
+    padding-right: 80px;
+    padding-bottom: 0;
+    padding-left: 0;
+}
 /* center-left */
 .hero-slide[data-pos="center-left"] .hero-content {
     justify-content: center; align-items: flex-start;
     text-align: left; padding: 80px 0 0 clamp(24px,6vw,80px);
     background: linear-gradient(to right, rgba(0,0,0,0.65) 0%, transparent 60%);
+}
+.hero-slide[data-pos="left-center"] .hero-content {
+    justify-content: center;      /* vertical center */
+    align-items: flex-start;      /* left side */
+    text-align: left;
+
+    padding: 0 0 0 clamp(24px,6vw,80px);
 }
 
 /* center-right */
@@ -287,6 +315,14 @@ nav {
     justify-content: flex-start; align-items: flex-start;
     text-align: left; padding: 120px 0 0 clamp(24px,6vw,80px);
     background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%, transparent 60%);
+}
+
+/* top-right */
+.hero-slide[data-pos="top-right"] .hero-content {
+    justify-content: flex-end; align-items: flex-start;
+    text-align: right; padding: 120px clamp(24px,6vw,80px) 0 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%, transparent 60%);
+    
 }
 
 .hero-slide[data-pos="bottom-left"] .hero-actions,
