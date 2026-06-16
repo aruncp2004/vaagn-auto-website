@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/velevmot/public_html/vaagnauto.com/new-website
+    - export DEPLOYPATH=/home/velevmot/public_html/vaagnauto.com
     - /bin/cp -r $HOME/repositories/vaagn-auto-website/* $DEPLOYPATH
