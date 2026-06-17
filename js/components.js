@@ -62,8 +62,8 @@ const COMPONENTS = {
 </div>
       </li>
       <li><a href="/become-a-dealer.html">Dealership</a></li>
-      <li><a href="tel:+919600809197">Contact</a></li>
-       <li><a href="/become-a-dealer.html">Dealer's Portal</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+       <li><a href="/dealer-portal.html">Dealer's Portal</a></li>
     </ul>
     <div class="nav-right">
       <a href="javascript:void(0)" class="btn-nav" onclick="openPopup('General')">Get a Quote</a>
