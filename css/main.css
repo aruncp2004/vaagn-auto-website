@@ -25,6 +25,7 @@ nav {
      
       transition: opacity .4s ease, transform .4s ease, box-shadow .3s;
     }
+    .logo-word { font-size: 11px; letter-spacing: 1.5px; white-space: nowrap; }
     .logo-img { 
   height: 50px; /* Reduce this number to make the logo smaller */
   width: auto; 
@@ -184,6 +185,12 @@ nav {
     .nav-hamburger.open span:nth-child(2) { opacity: 0; }
     .nav-hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
 
+@media(max-width:768px) {
+  .nav-hamburger { display: flex !important; }
+  .nav-hamburger span { background: var(--navy) !important; }
+  nav { padding: 0 14px; height: 52px; }
+  
+}
 
     /* --- PREMIUM CARD BUTTONS --- */
 .card-actions { 
@@ -411,6 +418,7 @@ nav {
 }
 @media(max-width:480px){
     .cg2-strip { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+    
 }
 
 .community-grid {
