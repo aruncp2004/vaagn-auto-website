@@ -1,17 +1,27 @@
-# Force HTTPS
 RewriteEngine On
+
+# Force HTTPS
 RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-# Remove .html extension - redirect to clean URL
-RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+(.+)\.html[\s?] [NC]
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Strip .html extension (redirect browser to clean URL)
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
 RewriteRule ^ /%1 [R=301,L]
+
+# Serve .html files when clean URL is requested (internal rewrite, no redirect)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^.]+)$ $1.html [L]
+
 # Remove trailing slash for files
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)/$ /$1 [L,R=301]
+
 # Clean URLs - serve index.html from folders
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^([^\.]+)$ $1/index.html [NC,L]
+
 # 301 Redirects
 Redirect 301 /velevmotors /
 Redirect 301 /titan-intercart /titan-cargo-intercart
@@ -26,13 +36,16 @@ Redirect 301 /privacy-policy /privacy-policy
 Redirect 301 /apply-dealership /become-a-dealer
 Redirect 301 /job-openings /careers
 Redirect 301 /beast-lx-auto-tipper-double-door /beast-lx-tipper-dd
+
 # 404
 ErrorDocument 404 /index.html
+
 # Security headers
 Header set X-Content-Type-Options "nosniff"
 Header set X-Frame-Options "SAMEORIGIN"
 Header set X-XSS-Protection "1; mode=block"
 Header set Referrer-Policy "strict-origin-when-cross-origin"
+
 # Browser caching
 <IfModule mod_expires.c>
 ExpiresActive On
@@ -41,6 +54,7 @@ ExpiresByType image/png "access plus 1 month"
 ExpiresByType text/css "access plus 1 week"
 ExpiresByType application/javascript "access plus 1 week"
 </IfModule>
+
 # Gzip compression
 <IfModule mod_deflate.c>
 AddOutputFilterByType DEFLATE text/html text/css application/javascript
