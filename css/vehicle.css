@@ -292,8 +292,7 @@ footer{background:#0f0f0f;padding:44px 48px 24px;border-top:1px solid rgba(255,2
   .hamburger{display:flex !important;}
 
   /* Hero */
-  .hero{grid-template-columns:1fr !important;margin-top:60px !important;min-height:auto !important;}
-  .hero-l{padding:32px 20px 28px;order:2;}
+.hero{grid-template-columns:1fr !important;margin-top:0px !important;min-height:auto !important;}  .hero-l{padding:32px 20px 28px;order:2;}
   .hero-r{height:280px !important;min-height:unset !important;}  /* fix: was min-height:100% which collapses when parent is auto */
   h1{font-size:2.2rem;}
   .disc{top:10px;right:10px;padding:10px 12px;min-width:105px;}
