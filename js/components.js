@@ -206,10 +206,10 @@ const COMPONENTS = {
         <div class="f-col">
           <p class="f-col-title">Company</p>
           <ul>
-            <li><a href="/#about-band">About Us</a></li>
-            <li><a href="/#dealer-section">Dealership</a></li>
-            <li><a href="/#community">Customers</a></li>
-            <li><a href="mailto:vaagnauto@gmail.com">Contact Us</a></li>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/become-a-dealer.html">Dealership</a></li>
+            <li><a href="/index.html#community">Customers</a></li>
+            <li><a href="/contact.html">Contact Us</a></li>
             <li><a href="/privacy-policy.html">Privacy Policy</a></li>
             <li><a href="/terms-and-conditions.html">Terms &amp; Conditions</a></li>
           </ul>
