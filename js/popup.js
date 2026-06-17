@@ -1,8 +1,14 @@
 // POPUP AUTO OPEN — only if not already seen
-if (!localStorage.getItem('vaagn_popup_seen')) {
-  setTimeout(() => openPopup('General'), 30000);
-}
-
+// if (!localStorage.getItem('vaagn_popup_seen')) {
+//   setTimeout(() => openPopup('General'), 10000);
+// }
+// POPUP AUTO OPEN — every 10 seconds while popup is not currently visible
+setInterval(() => {
+  const overlay = document.getElementById('popup-overlay');
+  if (overlay && !overlay.classList.contains('active')) {
+    openPopup('General');
+  }
+}, 10000);
 function openPopup(v) {
   document.getElementById('p-vehicle').value = v;
   document.getElementById('popup-sub').textContent = v !== 'General' 
