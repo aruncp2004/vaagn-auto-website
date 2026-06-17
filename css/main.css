@@ -703,7 +703,7 @@ nav {
       .slide-arrow { width: 32px; height: 32px; font-size: 13px; }
       .arrow-prev { left: 4px; }
       .arrow-next { right: 4px; }
-      .slide-dots { bottom: 16px; }
+      .slide-dots { bottom: 72px; }
       .slide-counter { display: none; }
       .section { padding: 40px 16px; }
       .s-title { font-size: 24px; }
