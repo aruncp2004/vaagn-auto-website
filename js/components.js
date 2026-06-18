@@ -22,7 +22,7 @@ const COMPONENTS = {
       <span class="mega-vn">Beast SX</span>
     </a>
     <a href="/beast-lx-tipper-dd" class="mega-vi" onclick="closeDrawer()">
-      <div class="mega-vi-img"><img src="/images/beast-lx-tipper-dd/Beast-LX-Tipper1.png" onerror="this.style.opacity='.1'" alt="Beast LX Tipper DD"></div>
+      <div class="mega-vi-img"><img src="/images/beast-lx-tipper-dd/Beast-LX-Tipper1.jpeg" onerror="this.style.opacity='.1'" alt="Beast LX Tipper DD"></div>
       <span class="mega-vn">Beast LX Tipper DD</span>
     </a>
     <a href="/beast-lx-tipper-nd" class="mega-vi" onclick="closeDrawer()">
@@ -38,11 +38,11 @@ const COMPONENTS = {
       <span class="mega-vn">Beast LX Open Cart</span>
     </a>
     <a href="/titan-ec-cart" class="mega-vi" onclick="closeDrawer()">
-      <div class="mega-vi-img"><img src="/images/titan-ec-cart/titan-ec-cart-yellow.png" onerror="this.style.opacity='.1'" alt="Titan EC Cart"></div>
+      <div class="mega-vi-img"><img src="/images/titan-ec-cart/titan-ec-cart-yellow.jpeg" onerror="this.style.opacity='.1'" alt="Titan EC Cart"></div>
       <span class="mega-vn">Titan EC Cart</span>
     </a>
     <a href="/titan-cargo-intercart" class="mega-vi" onclick="closeDrawer()">
-      <div class="mega-vi-img"><img src="/images/titan-intercart/intercart_yellow.png" onerror="this.style.opacity='.1'" alt="Titan Cargo Intercart"></div>
+      <div class="mega-vi-img"><img src="/images/titan-intercart/intercart_yellow.jpeg" onerror="this.style.opacity='.1'" alt="Titan Cargo Intercart"></div>
       <span class="mega-vn">Titan Cargo Intercart</span>
     </a>
     <a href="/titan-cargo-closed-cart" class="mega-vi" onclick="closeDrawer()">
@@ -50,7 +50,7 @@ const COMPONENTS = {
       <span class="mega-vn">Titan Cargo Closed</span>
     </a>
     <a href="/titan-cargo-open-cart" class="mega-vi" onclick="closeDrawer()">
-      <div class="mega-vi-img"><img src="/images/titan-cargo-open-cart/titan-open-yellow2.png" onerror="this.style.opacity='.1'" alt="Titan Cargo Open"></div>
+      <div class="mega-vi-img"><img src="/images/titan-cargo-open-cart/titan-open-yellow2.jpeg" onerror="this.style.opacity='.1'" alt="Titan Cargo Open"></div>
       <span class="mega-vn">Titan Cargo Open</span>
     </a>
     <a href="/titan-passenger" class="mega-vi" onclick="closeDrawer()">
@@ -96,7 +96,7 @@ const COMPONENTS = {
           <span class="mega-vp">From ₹4.12L</span>
         </a>
         <a href="/beast-lx-tipper-dd" class="mega-vi" onclick="closeDrawer()">
-          <div class="mega-vi-img"><img src="/images/beast-lx-tipper-dd/Beast-LX-Tipper1.png" onerror="this.style.opacity='.1'" alt="Beast LX Tipper DD"></div>
+          <div class="mega-vi-img"><img src="/images/beast-lx-tipper-dd/Beast-LX-Tipper1.jpeg" onerror="this.style.opacity='.1'" alt="Beast LX Tipper DD"></div>
           <span class="mega-vn">Beast LX Tipper DD</span>
           <span class="mega-vp">From ₹5.10L</span>
         </a>
@@ -116,12 +116,12 @@ const COMPONENTS = {
           <span class="mega-vp">From ₹4.47L</span>
         </a>
         <a href="/titan-ec-cart" class="mega-vi" onclick="closeDrawer()">
-          <div class="mega-vi-img"><img src="/images/titan-ec-cart/titan-ec-cart-yellow.png" onerror="this.style.opacity='.1'" alt="Titan EC Cart"></div>
+          <div class="mega-vi-img"><img src="/images/titan-ec-cart/titan-ec-cart-yellow.jpeg" onerror="this.style.opacity='.1'" alt="Titan EC Cart"></div>
           <span class="mega-vn">Titan EC Cart</span>
           <span class="mega-vp">From ₹2.23L</span>
         </a>
         <a href="/titan-cargo-intercart" class="mega-vi" onclick="closeDrawer()">
-          <div class="mega-vi-img"><img src="/images/titan-intercart/intercart_yellow.png" onerror="this.style.opacity='.1'" alt="Titan Cargo Intercart"></div>
+          <div class="mega-vi-img"><img src="/images/titan-intercart/intercart_yellow.jpeg" onerror="this.style.opacity='.1'" alt="Titan Cargo Intercart"></div>
           <span class="mega-vn">Titan Cargo Intercart</span>
           <span class="mega-vp">From ₹1.60L</span>
         </a>
@@ -131,7 +131,7 @@ const COMPONENTS = {
           <span class="mega-vp">From ₹2.64L</span>
         </a>
         <a href="/titan-cargo-open-cart" class="mega-vi" onclick="closeDrawer()">
-          <div class="mega-vi-img"><img src="/images/titan-cargo-open-cart/titan-open-yellow2.png" onerror="this.style.opacity='.1'" alt="Titan Cargo Open"></div>
+          <div class="mega-vi-img"><img src="/images/titan-cargo-open-cart/titan-open-yellow2.jpeg" onerror="this.style.opacity='.1'" alt="Titan Cargo Open"></div>
           <span class="mega-vn">Titan Cargo Open</span>
           <span class="mega-vp">From ₹2.49L</span>
         </a>
