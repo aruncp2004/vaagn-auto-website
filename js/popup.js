@@ -5,7 +5,7 @@
 // POPUP AUTO OPEN — every 10 seconds while popup is not currently visible
 setInterval(() => {
   const overlay = document.getElementById('popup-overlay');
-  if (overlay && !overlay.classList.contains('active')) {
+  if (overlay && !overlay.classList.contains('active') && !localStorage.getItem('vaagn_popup_seen')) {
     openPopup('General');
   }
 }, 10000);
@@ -19,9 +19,7 @@ function openPopup(v) {
 
 function closePopup() {
   document.getElementById('popup-overlay').classList.remove('active');
-  localStorage.setItem('vaagn_popup_seen', '1');
 }
-
 document.getElementById('popup-overlay').addEventListener('click', e => { 
   if(e.target === e.currentTarget) closePopup(); 
 });
