@@ -63,6 +63,7 @@ const COMPONENTS = {
       </li>
       <li><a href="/become-a-dealer.html">Dealership</a></li>
       <li><a href="/contact.html">Contact</a></li>
+      <li><a href="https://academy.vaagnauto.com" target="_blank" rel="noopener"> Viem Academy</a></li>
        <li><a href="/dealer-portal.html">Dealer's Portal</a></li>
     </ul>
     <div class="nav-right">
@@ -170,8 +171,8 @@ const COMPONENTS = {
         <a href="/become-a-dealer.html" onclick="closeDrawer()">Become a Dealer</a>
       </div>
       <div class="mega-col">
-        <p class="mega-col-title">Viem</p>
-        <a href="/become-a-dealer.html" onclick="closeDrawer()"> Viem Academy</a>
+        <p class="mega-col-title">Viem Academy</p>
+        <a href="https://academy.vaagnauto.com" target="_blank" rel="noopener" onclick="closeDrawer()">Viem Academy</a>
       </div>
     </div>
 
