@@ -9,7 +9,7 @@ setInterval(() => {
     openPopup('General');
   }
 }, 10000);
-function openPopup(v) {
+function openPopup(o) {
   document.getElementById('p-vehicle').value = v;
   document.getElementById('popup-sub').textContent = v !== 'General' 
     ? 'Enquiring about ' + v + '. Our team calls back within 24h.' 

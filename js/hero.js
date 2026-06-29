@@ -14,11 +14,11 @@ function goSlide(n) {
 function nextSlide() { goSlide(cur + 1); }
 function prevSlide() { goSlide(cur - 1); }
 
-let autoT = setInterval(nextSlide, 5000);
+let autoT = setInterval(nextSlide, 500000);
 const hw = document.getElementById('hero-wrap');
 if(hw) {
   hw.addEventListener('mouseenter', () => clearInterval(autoT));
-  hw.addEventListener('mouseleave', () => { autoT = setInterval(nextSlide, 5000); });
+  hw.addEventListener('mouseleave', () => { autoT = setInterval(nextSlide, 500000); });
 }
 
 function switchImg(idx, src, dot) {
