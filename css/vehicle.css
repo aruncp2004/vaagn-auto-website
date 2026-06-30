@@ -387,13 +387,37 @@ footer{background:#0f0f0f;padding:44px 48px 24px;border-top:1px solid rgba(255,2
 }
 
 /* ── SMALL MOBILE (≤380px) ── */
-@media(max-width:380px){
+@media(max-width:480px){
   h1{font-size:1.6rem;}
   .hero-r{height:190px !important;}
   .hk-val{font-size:1.2rem;}
   .price-badge{padding:8px 12px;}
   .hero-keys{padding-top:16px;}
   .spec-cards{grid-template-columns:1fr 1fr !important;}
+ 
+}
+
+@media (max-width: 860px) {
+  #dealership .dealer-grid {
+    display: flex !important;
+    flex-direction: column !important; /* Forces vertical stacking */
+    gap: 20px !important;              /* Spacing between vertical cards */
+  }
+
+  #dealership .dealer-card {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;            /* Spans full width of screen */
+    box-sizing: border-box !important;
+  }
+}
+
+@media (max-width: 480px) {
+  #dealership .dealer-grid {
+    display: flex !important;
+    flex-direction: column !important; /* Strictly keeps column layout on small phones */
+    gap: 16px !important;
+  }
 }
 
 /* STICKY BAR — Call blue, WhatsApp green */
